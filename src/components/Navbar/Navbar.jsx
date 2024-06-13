@@ -22,7 +22,7 @@ export const Navbar = () => {
     return (
         <nav className={styles.navbar}>
             <a className={styles.title} href='/'>
-                Portfolio
+                Kimleng Thai
             </a>
             <div className={styles.menu}>
                 {isMobile && ( // Display MenuIcon only on mobile screens
