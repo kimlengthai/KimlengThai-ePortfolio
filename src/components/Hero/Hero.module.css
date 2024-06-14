@@ -33,7 +33,10 @@
     font-weight: bold;
     font-family: Helvetica;
     margin-bottom: 52px;
-    align-items: center;
+    text-align: center; /* Center align the text horizontally */
+    display: flex; /* Use flexbox */
+    align-items: center; /* Align items vertically */
+    justify-content: center; /* Center justify the content horizontally */
 }
 
 .contactBtn {
@@ -41,10 +44,17 @@
     background-color: var(--neutral-color-3);
     color: var(--primary-color);
     border-radius: 15px;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 600;
     padding: 17px 26px;
     box-shadow: 0 0 15px 0 rgb(7, 255, 251);
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.contactBtn:hover {
+    background-color: var(--primary-color);
+    color: var(--neutral-color-3);
+    transform: scale(1.05); /* Zoom in effect */
 }
 
 .heroImg {
@@ -57,7 +67,6 @@
     animation-timing-function: ease-in-out;
     box-shadow: 0 0 50px 0 rgb(7, 255, 251);
 }
-
 
 @keyframes floating {
     0% {
@@ -85,7 +94,6 @@
     z-index: 0;
 }
 
-
 .bottomBlur {
     position: absolute;
     width: 70vw;
@@ -107,15 +115,4 @@
     .content {
         align-items: center;
     }
-    .description {
-        font-size: 30px;
-        font-weight: bold;
-        font-family: Helvetica;
-        margin-bottom: 52px;
-        text-align: center; /* Center align the text horizontally */
-        display: flex; /* Use flexbox */
-        align-items: center; /* Align items vertically */
-        justify-content: center; /* Center justify the content horizontally */
-    }
-    
 }
