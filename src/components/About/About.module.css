@@ -1,18 +1,21 @@
 .aboutSection {
     padding: 20px;
     text-align: center;
+    margin-top: 10px;
   }
   
   .aboutContent {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 10px;
   }
   
   .aboutImage {
-    width: 200px;
-    height: auto;
-    border-radius: 50%;
+    width: 400px;
+    height: 300px;
+    border-radius: 5%;
+    margin-top: 10px;
     margin-bottom: 20px;
   }
   
@@ -27,6 +30,7 @@
     line-height: 1.5;
     max-width: 600px;
     margin-bottom: 20px;
+    text-align: left; /* Left-align the paragraph */
   }
   
   .buttons {
@@ -37,7 +41,8 @@
   }
   
   .contactButton, .connectButton {
-    display: inline-block;
+    display: flex;
+    align-items: center;
     padding: 10px 20px;
     margin: 5px 0;
     font-size: 16px;
@@ -50,6 +55,10 @@
   
   .contactButton:hover, .connectButton:hover {
     background-color: #005582; /* Darker LinkedIn color */
+  }
+  
+  .icon {
+    margin-right: 8px; /* Space between the icon and the text */
   }
   
   .navigation {

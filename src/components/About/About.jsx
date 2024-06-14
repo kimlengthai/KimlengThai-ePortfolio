@@ -1,6 +1,7 @@
 import styles from './About.module.css';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
 
 export const About = () => {
   return (
@@ -22,9 +23,11 @@ export const About = () => {
         </p>
         <div className={styles.buttons}>
           <a href="mailto:your-email@example.com" className={styles.contactButton}>
+            <MailOutlineIcon className={styles.icon} />
             Contact me
           </a>
           <a href="https://www.linkedin.com/in/your-profile" className={styles.connectButton} target="_blank" rel="noopener noreferrer">
+            <LinkedInIcon className={styles.icon} />
             Connect with me
           </a>
         </div>
