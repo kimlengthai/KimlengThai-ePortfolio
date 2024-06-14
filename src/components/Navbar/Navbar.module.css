@@ -3,8 +3,8 @@
 .navbar {
   position: relative;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
   padding-top: 61px;
   z-index: 2;
   margin: 0 10%;
@@ -17,61 +17,56 @@
   color: var(--color-text);
 }
 
+.menuIconContainer {
+  display: block;
+  cursor: pointer;
+}
 
 .menuBtn {
   display: none;
 }
 
 .menu {
-  display: flex;
+  position: absolute;
+  right: 0px;
+  margin-right: 10%;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 11px;
+  z-index: 3;
 }
 
 .menuItems {
-  display: flex;
-  gap: 47px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 13px;
   list-style: none;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  padding: 24px 33px;
+  box-shadow: 0 0 4px 0 rgb(7, 255, 251);
 }
 
 .menuItems a {
   font-size: 25px;
   color: var(--color-text);
   text-decoration: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: .25rem;
 }
 
-@media screen and (max-width: 830px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+.menuOpen {
+  display: flex;
+  z-index: 1;
+}
 
-  .menu {
-    position: absolute;
-    right: 0;
-    margin-right: 10%;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 11px;
-    z-index: 3;
-  }
+.menuItems li:hover {
+  background-color: var(--color-bg);
+}
 
-  .menuBtn {
-    display: block;
-    cursor: pointer;
-  }
-
-  .menuItems {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    gap: 13px;
-    border-radius: 10px;
-    background-color: #FFFFFF; /* Minimalistic background color */
-    padding: 24px 33px;
-    box-shadow: 0 0 4px 0 rgb(7, 255, 251); /*Border for pf as well*/
-  }
-
-  .menuOpen {
-    display: flex;
-    z-index: 1;
-  }
+.menuItems li.active {
+  background-color: #555;
 }
