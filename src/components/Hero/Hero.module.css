@@ -7,7 +7,7 @@
     align-items: center;
     justify-content: space-between;
     margin-top: 49px;
-    z-index: 2;
+    z-index: 1; /*Set it to 1 to ensure the menu item is functional*/
     margin-left: 10%;
     margin-right: 10%;
 }
