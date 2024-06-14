@@ -22,11 +22,11 @@ export const About = () => {
         that contribute to a positive and collaborative environment.
         </p>
         <div className={styles.buttons}>
-          <a href="mailto:your-email@example.com" className={styles.contactButton}>
+          <a href="mailto:kimleng.ngs@gmail.com" className={styles.contactButton}>
             <MailOutlineIcon className={styles.icon} />
             Contact me
           </a>
-          <a href="https://www.linkedin.com/in/your-profile" className={styles.connectButton} target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/kimlengthai/" className={styles.connectButton} target="_blank" rel="noopener noreferrer">
             <LinkedInIcon className={styles.icon} />
             Connect with me
           </a>
@@ -39,10 +39,10 @@ export const About = () => {
           <a href="#contact">Contact</a>
         </div>
         <div className={styles.icons}>
-          <a href="https://github.com/your-profile" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/kimlengthai" target="_blank" rel="noopener noreferrer">
             <GitHubIcon />
           </a>
-          <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/kimlengthai/" target="_blank" rel="noopener noreferrer">
             <LinkedInIcon />
           </a>
         </div>
