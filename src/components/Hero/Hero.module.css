@@ -38,13 +38,13 @@
 
 .contactBtn {
     text-decoration: none;
-    background-color: var(--color-primary);
-    color: var(--color-text);
-    border-radius: 30px;
+    background-color: var(--neutral-color-3);
+    color: var(--primary-color);
+    border-radius: 15px;
     font-size: 30px;
     font-weight: 600;
     padding: 17px 26px;
-    box-shadow: 0 0 4px 0 rgb(7, 255, 251);
+    box-shadow: 0 0 15px 0 rgb(7, 255, 251);
 }
 
 .heroImg {
