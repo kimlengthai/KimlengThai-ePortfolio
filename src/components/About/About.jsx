@@ -14,7 +14,7 @@ export const About = () => {
           className={styles.aboutImage}
         />
         <p className={styles.introText}>About Me</p>
-        <p className={styles.aboutText}>I am a software engineering student at the University of Technology Sydney, 
+        <p className={styles.aboutText}>I am a software engineering student at the University of Technology Sydney, I
         passionate about learning new skills and undertaking new projects. I constantly seek opportunities to enhance 
         my expertise and contribute to impactful solutions. Through various projects, I have demonstrated my passion 
         for problem-solving and my skill in front-end development. My hobbies include playing sports and traveling. 

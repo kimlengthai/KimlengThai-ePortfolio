@@ -48,14 +48,16 @@
     margin: 5px 0;
     font-size: 16px;
     color: #fff;
-    background-color: #0073b1; /* LinkedIn color */
+    background-color: var(--neutral-color-3);
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
   }
   
   .contactButton:hover, .connectButton:hover {
-    background-color: #005582; /* Darker LinkedIn color */
+    background-color: var(--primary-color);
+    color: var(--neutral-color-3);
+    transform: scale(1.05); /* Zoom in effect */
   }
   
   .icon {
