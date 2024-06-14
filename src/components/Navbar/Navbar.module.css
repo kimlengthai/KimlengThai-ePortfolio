@@ -65,7 +65,7 @@
 }
 
 .menuItems li:hover {
-  background-color: var(--color-bg);
+  background-color: var(--secondary-color-1);
   border-radius: 10px;
 }
 

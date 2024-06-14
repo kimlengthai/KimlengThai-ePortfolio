@@ -7,7 +7,7 @@
     align-items: center;
     justify-content: space-between;
     margin-top: 49px;
-    z-index: 1;
+    z-index: 2;
     margin-left: 10%;
     margin-right: 10%;
 }
@@ -23,14 +23,17 @@
 .title {
     font-size: 30px;
     font-weight: bold;
-    margin-bottom: 33px;
+    margin-top: 40px;
+    margin-bottom: 20px;
     font-family: Helvetica;
 }
 
 .description {
     font-size: 30px;
+    font-weight: bold;
     font-family: Helvetica;
     margin-bottom: 52px;
+    align-items: center;
 }
 
 .contactBtn {
@@ -45,7 +48,7 @@
 }
 
 .heroImg {
-    width: 30%;
+    width: 40%;
     z-index: 1;
     border-radius: 50%;
     animation-name: floating;
@@ -104,4 +107,15 @@
     .content {
         align-items: center;
     }
+    .description {
+        font-size: 30px;
+        font-weight: bold;
+        font-family: Helvetica;
+        margin-bottom: 52px;
+        text-align: center; /* Center align the text horizontally */
+        display: flex; /* Use flexbox */
+        align-items: center; /* Align items vertically */
+        justify-content: center; /* Center justify the content horizontally */
+    }
+    
 }
