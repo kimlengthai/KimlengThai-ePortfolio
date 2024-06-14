@@ -4,7 +4,8 @@ import { Hero } from './components/Hero/Hero';
 import { Navbar } from './components/Navbar/Navbar';
 import { About } from './components/About/About';
 import { Experience } from './components/Experience/Experience';
-import { Project } from './components/Projects/Project';
+import { Project } from './components/Project/Project';
+import { Contact } from './components/Contact/Contact';
 
 function App() {
   const [component, setComponent] = useState(<Hero />);
@@ -20,6 +21,9 @@ function App() {
           break;
         case '#project':
           setComponent(<Project />);
+          break;
+        case '#contact':
+          setComponent(<Contact />);
           break;
         case '#home':
         default:
