@@ -2,7 +2,7 @@
   padding: 20px;
   text-align: center;
   margin-top: 10px;
-  height: 700px;
+  height: 900px;
 }
 
 .aboutContent {
@@ -16,6 +16,7 @@
   .aboutContent {
     flex-direction: row;
     justify-content: center;
+    line-height: 25px;
   }
 }
 
@@ -37,12 +38,15 @@
   max-width: 700px;
   width: 100%;
   box-sizing: border-box;
+  margin-top: 20px;
 }
 
 @media (min-width: 830px) {
   .infoBox {
     flex-direction: row;
     margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -54,6 +58,15 @@
   row-gap: 15px;
   width: 100%;
   box-sizing: border-box;
+}
+
+@media (max-width: 830px) {
+  .aboutInfo {
+    text-align: left;
+    margin-left: 25px;
+    row-gap: 15px;
+    margin-top: 10px;
+  }
 }
 
 .name {
