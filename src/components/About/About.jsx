@@ -21,7 +21,7 @@ export const About = () => {
               <li>Bachelor of Engineering</li>
               <li>Major in Software Engineering</li>
               <li>Feb 2022 - June 2026 (Expected)</li>
-              <li>I love to build things and solve problems.</li>
+              <li>I love to build things and solve problems</li>
               <li>Maths tutor at Ezy Math Tutoring</li>
             </ul>
           </div>

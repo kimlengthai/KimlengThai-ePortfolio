@@ -2,7 +2,6 @@
   padding: 20px;
   text-align: center;
   margin-top: 10px;
-  height: 900px;
 }
 
 .aboutContent {
@@ -39,6 +38,7 @@
   width: 100%;
   box-sizing: border-box;
   margin-top: 20px;
+  
 }
 
 @media (min-width: 830px) {
@@ -92,6 +92,7 @@
   align-items: center;
   justify-content: center;
   gap: 30px;
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 
@@ -99,13 +100,15 @@
   display: flex;
   align-items: center;
   padding: 10px 20px;
-  margin: 5px 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
   font-size: 16px;
   color: #fff;
   background-color: var(--neutral-color-3);
   text-decoration: none;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
+  box-shadow: 0 0 15px 0 rgb(7, 255, 251);
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
 
 .contactButton:hover, .connectButton:hover {
@@ -132,6 +135,7 @@
   font-size: 16px;
   color: var(--color-text);
   text-decoration: none;
+  height: 60px;
 }
 
 .icons {
