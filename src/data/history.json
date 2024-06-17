@@ -1,29 +1,32 @@
 [
     {
-      "role": "Software Engineer",
-      "organisation": "Google",
-      "startDate": "Sept, 2022",
-      "endDate": "Present",
-      "experiences": ["Worked on Google Maps", "Reduced load times by 50%"],
-      "imageSrc": "history/google.png"
+      "role": "Frontend Developer",
+      "organisation": "Baby University",
+      "startDate": "Mar, 2024",
+      "endDate": "May, 2024",
+      "experiences": ["Worked on Animations pages on a book and main page", 
+                        "Implemented parental control pages to access the payment system", 
+                        "Automated build, testing, and deploy with GitHub Action, achieving 85% faster than manual deploy"],
+      "image": "/assets/history/LoginPage.png"
     },
     {
-      "role": "UI Designer",
-      "organisation": "Mirosoft",
-      "startDate": "Aug, 2021",
-      "endDate": "Aug, 2022",
-      "experiences": ["Worked on Windows 11", "Designed the control panel"],
-      "imageSrc": "history/microsoft.png"
+      "role": "Backend Developer",
+      "organisation": "Zambark",
+      "startDate": "Aug, 2023",
+      "endDate": "Nov, 2023",
+      "experiences": ["Worked on recommending student courses", 
+                        "Stored and retrieved subjects from MongoDB"],
+      "image": "/assets/history/zambark.png"
     },
     {
-      "role": "SWE Intern",
-      "organisation": "Netflix",
-      "startDate": "Apr, 2020",
-      "endDate": "Jun, 2020",
+      "role": "UI Designerand Frontend/Backend Developer",
+      "organisation": "University of Technology Sydney",
+      "startDate": "Sep, 2022",
+      "endDate": "Oct, 2022",
       "experiences": [
-        "Worked on component library",
-        "Helped create UI components"
+        "Developed a graphic user interface, allowing users to add, remove, and update membership status",
+        "Demonstrated proficiency in model-view-controller architecture"
       ],
-      "imageSrc": "history/netflix.png"
+      "image": "/assets/history/mms.png"
     }
   ]
