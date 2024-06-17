@@ -1,0 +1,61 @@
+[
+    {
+      "title": "HTML",
+      "image": "/assets/skills/html.png"
+    },
+    {
+      "title": "CSS",
+      "image": "/assets/skills/css.png"
+    },
+    {
+      "title": "JavaScript",
+      "image": "/assets/skills/javascript.png"
+    },
+
+    {
+        "title": "React",
+        "image": "/assets/skills/react.png"
+    },
+    {
+        "title": "React Native",
+        "image": "/assets/skills/ReactNative.png"
+    },
+
+    {
+      "title": "Material UI",
+      "image": "/assets/skills/materialUI.png"
+    },
+    {
+      "title": "Expo",
+      "image": "/assets/skills/expo.png"
+    },
+    {
+      "title": "Figma",
+      "image": "/assets/skills/figma.png"
+    },
+    {
+      "title": "C#",
+      "image": "/assets/skills/cSharp.png"
+    },
+
+    {
+        "title": "C++",
+        "image": "/assets/skills/cPlusPlus.png"
+    },
+    {
+        "title": "C",
+        "image": "/assets/skills/c.png"
+    },
+    {
+        "title": "Java",
+        "image": "/assets/skills/java.png"
+    },
+    {
+        "title": "Firebase",
+        "image": "/assets/skills/firebase.png"
+    },
+    {
+        "title": "MongoDB",
+        "image": "/assets/skills/mongoDB.png"
+    }
+  ]
