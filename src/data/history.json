@@ -5,8 +5,7 @@
       "startDate": "Mar, 2024",
       "endDate": "May, 2024",
       "experiences": ["Worked on Animations pages on a book and main page", 
-                        "Implemented parental control pages to access the payment system", 
-                        "Automated build, testing, and deploy with GitHub Action, achieving 85% faster than manual deploy"],
+                        "Implemented parental control pages to access the payment system"],
       "image": "/assets/history/LoginPage.png"
     },
     {
@@ -24,7 +23,7 @@
       "startDate": "Sep, 2022",
       "endDate": "Oct, 2022",
       "experiences": [
-        "Developed a graphic user interface, allowing users to add, remove, and update membership status",
+        "Developed a GUI, allowing users to add, remove, and update membership status",
         "Demonstrated proficiency in model-view-controller architecture"
       ],
       "image": "/assets/history/mms.png"
