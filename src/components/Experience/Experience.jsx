@@ -8,7 +8,7 @@ export const Experience = () => {
       <h2 className={styles.title}>Experience</h2>
       <div className={styles.content}>
         <div className={styles.skills}>
-          <h3>Technical Skills</h3>
+          <h3 className={styles.technicalSkill}>Technical Skills</h3>
           <div className={styles.skillsList}>
             {skills.map((skill) => (
               <div key={skill.title} className={styles.skill}>
@@ -21,7 +21,7 @@ export const Experience = () => {
           </div>
         </div>
         <div className={styles.historySection}>
-          <h3>Work History</h3>
+          <h3 className={styles.workHistory}>Work History</h3>
           <ul className={styles.history}>
             {history.map((historyItem) => (
               <li key={historyItem.role} className={styles.historyItem}>
