@@ -7,14 +7,14 @@ export const Experience = () => {
     <section className={styles.container} id='experience'>
       <h2 className={styles.title}>Experience</h2>
       <div className={styles.content}>
-        <div className={styles.skills}>
+        <div className={styles.skillsSection}>
           <h3 className={styles.technicalSkill}>Technical Skills</h3>
           <div className={styles.skillsList}>
             {skills.map((skill) => (
               <div key={skill.title} className={styles.skill}>
-              <div className={styles.skillImageContainer}> 
-              <img src={skill.image} alt={skill.title} className={styles.skillImage} />
-              </div>
+                <div className={styles.skillImageContainer}>
+                  <img src={skill.image} alt={skill.title} className={styles.skillImage} />
+                </div>
                 <p>{skill.title}</p>
               </div>
             ))}
@@ -22,19 +22,21 @@ export const Experience = () => {
         </div>
         <div className={styles.historySection}>
           <h3 className={styles.workHistory}>Work History</h3>
-          <ul className={styles.history}>
+          <ul className={styles.historyList}>
             {history.map((historyItem) => (
               <li key={historyItem.role} className={styles.historyItem}>
-                <img src={historyItem.image} alt={`${historyItem.organisation} Logo`} className={styles.historyImage} />
-                <div className={styles.historyItemDetails}>
-                  <h4>{`${historyItem.role}, ${historyItem.organisation}`}</h4>
-                  <p>{`${historyItem.startDate} - ${historyItem.endDate}`}</p>
-                  <ul>
-                    {historyItem.experiences.map((experience, id) => (
-                      <li key={id}>{experience}</li>
-                    ))}
-                  </ul>
-                </div>
+                <a href={historyItem.url} target="_blank" rel="noopener noreferrer" className={styles.historyLink}>
+                  <img src={historyItem.image} alt={`${historyItem.organisation} Logo`} className={styles.historyImage} />
+                  <div className={styles.historyItemDetails}>
+                    <h4>{`${historyItem.role}, ${historyItem.organisation}`}</h4>
+                    <p>{`${historyItem.startDate} - ${historyItem.endDate}`}</p>
+                    <ul>
+                      {historyItem.experiences.map((experience, id) => (
+                        <li key={id}>{experience}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </a>
               </li>
             ))}
           </ul>

@@ -6,7 +6,8 @@
       "endDate": "May, 2024",
       "experiences": ["Worked on Animations pages on a book and main page", 
                         "Implemented parental control pages to access the payment system"],
-      "image": "/assets/history/LoginPage.png"
+      "image": "/assets/history/LoginPage.png",
+      "url": "https://github.com/kimlengthai/BabyUniversity"
     },
     {
       "role": "Backend Developer",
@@ -15,7 +16,8 @@
       "endDate": "Nov, 2023",
       "experiences": ["Worked on recommending student courses", 
                         "Stored and retrieved subjects from MongoDB"],
-      "image": "/assets/history/zambark.png"
+      "image": "/assets/history/zambark.png",
+      "url": "https://github.com/kimlengthai/ZAMBARK-SUGGEST"
     },
     {
       "role": "Frontend/Backend Developer",
@@ -26,6 +28,7 @@
         "Developed a GUI, allowing users to add, remove, and update membership status",
         "Demonstrated proficiency in model-view-controller architecture"
       ],
-      "image": "/assets/history/mms.png"
+      "image": "/assets/history/mms.png",
+      "url": "https://github.com/kimlengthai/MMSfx"
     }
   ]
