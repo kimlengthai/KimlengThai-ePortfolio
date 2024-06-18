@@ -6,7 +6,7 @@ import MailOutlineIcon from '@mui/icons-material/MailOutline';
 export const About = () => {
   return (
     <section className={styles.aboutSection} id="about">
-      <h2>Welcome to my page!</h2>
+      <h2 className={styles.title}>Welcome to my page!</h2>
       <div className={styles.aboutContent}>
         <div className={styles.infoBox}>
           <img
