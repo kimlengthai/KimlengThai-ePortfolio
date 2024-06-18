@@ -1,10 +1,16 @@
 import styles from './Project.module.css';
+import projects from '../../data/projects.json';
+import ProjectCard from './ProjectCard';
 
 export const Project = () => {
   return (
-    <section className={styles.projectSection}>
-      <h2>Projects</h2>
-      <p>Your projects details go here.</p>
+    <section className={styles.container}>
+      <h2 className={styles.title}>Projects</h2>
+      <div className={styles.projects}>
+        {projects.map((project, id) => (
+          <ProjectCard key={id} project={project} />
+        ))}
+      </div>
     </section>
   );
 }
