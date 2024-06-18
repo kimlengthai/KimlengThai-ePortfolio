@@ -11,6 +11,15 @@ export const Hero = () => {
     <img src="../../../assets/profile/profilePicture.jpeg" alt="My profile image" className={styles.heroImg}/>
     <div className={styles.topBlur}></div>
     <div className={styles.bottomBlur}></div>
+    
+    <div className={styles.navigation}>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#project">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
+
     </section>
   )
 }

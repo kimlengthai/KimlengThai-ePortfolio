@@ -10,6 +10,8 @@
     z-index: 1; /*Set it to 1 to ensure the menu item is functional*/
     margin-left: 10%;
     margin-right: 10%;
+    text-align: center;
+    padding-bottom: 20px;
 }
 
 .content {
@@ -18,7 +20,7 @@
     align-items: center;
     color: var(--color-text);
     z-index: 1;
-    height: 500px;
+    height: 480px;
 }
 
 .title {
@@ -30,9 +32,9 @@
 }
 
 .description {
-    font-size: 30px;
-    font-weight: bold;
+    font-size: 20px;
     font-family: Helvetica;
+    font-weight: 400;
     margin-bottom: 52px;
     text-align: center; /* Center align the text horizontally */
     display: flex; /* Use flexbox */
@@ -67,6 +69,7 @@
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
     box-shadow: 0 0 50px 0 rgb(7, 255, 251);
+    margin-bottom: 20px;
 }
 
 @keyframes floating {
@@ -109,11 +112,40 @@
     z-index: 0;
 }
 
+.navigation {
+    display: flex;
+    position: absolute; /*Add this line to ensure I can move my navigation items*/
+    bottom: 0px;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    z-index: 2; /*Set it to 2 to ensure the navigation items are functional*/
+  }
+  
+  .navigation a {
+    margin: 5px 0;
+    font-size: 16px;
+    color: var(--color-text);
+    text-decoration: none;
+    height: 60px;
+  }
+
 @media screen and (max-width: 830px) {
     .container {
         flex-direction: column-reverse;
     }
     .content {
         align-items: center;
+    }
+    .title {
+        font-size: 24px;
+    }
+    .description {
+        font-size: 16px;
+    }
+    .contactBtn {
+        font-size: 16px;
+        padding: 12px 20px;
     }
 }
