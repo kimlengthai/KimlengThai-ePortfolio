@@ -5,7 +5,7 @@
     flex-direction: column;
     border-radius: 10px;
     background-color: #f9f9f9;
-    box-shadow: 0 16px 14px 0 #04152d;
+    box-shadow: 0 0 15px 0 rgb(7, 255, 251);
     padding: 18px 24px;
     max-width: 345px;
     width: 100%;
@@ -60,14 +60,24 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    color: #fff;
 }
+
+.link:hover {
+    background-color: var(--primary-color);
+    color: var(--neutral-color-3);
+    transform: scale(1.05);
+  }
 
 .link {
     text-decoration: none;
-    color: var(--color-text);
     font-size: 16px;
     font-weight: 600;
     border-radius: 100px;
-    background-color: var(--color-primary);
+    color: #fff;
+    background-color: var(--neutral-color-3);
+    box-shadow: 0 0 15px 0 rgb(7, 255, 251);
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
     padding: 5px 12px;
+    margin-top: 5px;
 }
