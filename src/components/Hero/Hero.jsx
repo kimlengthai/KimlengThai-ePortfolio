@@ -1,4 +1,5 @@
 import styles from './Hero.module.css';
+import profilePicture from '/assets/profile/profilePicture.jpeg';
 
 export const Hero = () => {
   return (
@@ -8,7 +9,7 @@ export const Hero = () => {
     <p className={styles.description}>I love to build things and I like coding.</p>
     <a href="mailto:kimleng.ngs@gmail.com" className={styles.contactBtn}>Contact Me</a>
     </div>
-    <img src="../../../assets/profile/profilePicture.jpeg" alt="My profile image" className={styles.heroImg}/>
+    <img src={profilePicture} alt="My profile image" className={styles.heroImg} />
     <div className={styles.topBlur}></div>
     <div className={styles.bottomBlur}></div>
     

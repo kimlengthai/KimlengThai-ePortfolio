@@ -2,6 +2,7 @@ import styles from './About.module.css';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import standupImg from '/assets/standup/standupImg.png';
 
 export const About = () => {
   return (
@@ -9,11 +10,12 @@ export const About = () => {
       <h2 className={styles.title}>Welcome to my page!</h2>
       <div className={styles.aboutContent}>
         <div className={styles.infoBox}>
-          <img
-            src="../../../assets/standup/standupImg.png"
-            alt="My standard picture"
-            className={styles.aboutImage}
-          />
+        <img
+          src={standupImg}
+          alt="My standard picture"
+          className={styles.aboutImage}
+        />
+
           <div className={styles.aboutInfo}>
             <h3 className={styles.name}>Kimleng Thai</h3>
             <p><strong>University of Technology Sydney</strong></p>

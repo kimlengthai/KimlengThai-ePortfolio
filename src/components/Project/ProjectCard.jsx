@@ -1,11 +1,29 @@
 import PropTypes from 'prop-types';
 import styles from './ProjectCard.module.css';
 
+// Importing images
+import LoginPageImage from '../../../assets/history/LoginPage.png';
+import zambarkImage from '../../../assets/history/zambark.png';
+import gameProfileImage from '../../../assets/projects/game_profile.png';
+
 export const ProjectCard = ({ project }) => {
   const { title, image, description, skills, demo, source } = project;
+  
+  // Determine which image to use based on project title
+  let projectImage;
+  if (title === 'LoginPage') {
+    projectImage = LoginPageImage;
+  } else if (title === 'zambark') {
+    projectImage = zambarkImage;
+  } else if (title === 'The Pursuit of Reflection') {
+    projectImage = gameProfileImage;
+  } else {
+    projectImage = image; // Fallback to provided image if not matched
+  }
+
   return (
     <div className={styles.container}> 
-      <img src={image} alt={`Image of ${title}`} className={styles.image} />
+      <img src={projectImage} alt={`Image of ${title}`} className={styles.image} />
       <h3 className={styles.title}>{title}</h3>
       <p className={styles.description}>{description}</p>
       <ul className={styles.skills}>
