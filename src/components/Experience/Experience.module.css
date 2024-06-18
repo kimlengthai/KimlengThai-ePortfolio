@@ -78,6 +78,7 @@
 
 .historyItem {
   margin-bottom: 40px;
+  box-shadow: 0 0 15px 0 rgb(7, 255, 251);
 }
 
 .historyLink {

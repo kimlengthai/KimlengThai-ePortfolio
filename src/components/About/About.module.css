@@ -10,6 +10,7 @@
   align-items: center;
   margin-top: 10px;
 }
+
 .title {
   color: var(--color-text);
   font-size: 35px;
@@ -47,7 +48,7 @@
   width: 100%;
   box-sizing: border-box;
   margin-top: 20px;
-  box-shadow: 0 0 2px 0 rgb(0, 0, 0);
+  box-shadow: 0 0 15px 0 rgb(7, 255, 251);
   
 }
 
