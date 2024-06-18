@@ -3,11 +3,17 @@
 .container {
     color: var(--color-text);
     margin-top: 120px;
-    background-color: var(--color-secondary);
+    background-color: var(--color-bg);
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    width: 100vw;
+    width: 100vw; /* Ensure full viewport width */
+    height: 590px;
+    position: relative; /* Use relative position */
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw; /* Compensate for the full viewport width */
+    margin-right: -50vw; /* Compensate for the full viewport width */
     padding: 58px 10%;
     gap: 10px;
 }
@@ -37,8 +43,7 @@
 }
 
 .link {
-    display: flex; /*display: flex to ensure the icon
-                    and text are in the same line*/
+    display: flex; /* Display flex to ensure the icon and text are in the same line */
     align-items: center;
     gap: 15px;
 }
@@ -57,6 +62,10 @@
         gap: 20px;
         padding: 20px 5%;
         align-items: center;
+        left: 0; /* Reset the left position */
+        right: 0; /* Reset the right position */
+        margin-left: 0; /* Reset the margin */
+        margin-right: 0; /* Reset the margin */
     }
 
     .text {
@@ -74,12 +83,11 @@
     }
 
     .links {
-        align-items: center;
+        align-items: flex-start;
     }
 
     .link {
         gap: 10px;
-        
     }
 
     .link a {
