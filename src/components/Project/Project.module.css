@@ -5,7 +5,8 @@
     color: var(--color-text);
     margin-left: 10%;
     margin-right: 10%;
-    height: 1500px;
+    height: 1550px;
+    overflow: hidden;
 }
 
 .title {
@@ -15,7 +16,8 @@
     letter-spacing: 1.75px;
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    top: 30px;
 }
 
 .projects {
