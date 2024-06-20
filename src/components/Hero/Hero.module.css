@@ -154,8 +154,7 @@ body {
         padding: 12px 20px;
     }
     .heroImg {
-        width: 60%; /* Reduce the width of the profile image */
-        max-width: 300px; /* Limit the maximum width */
+        width: 80%; /* Reduce the width of the profile image */
         z-index: 1;
         border-radius: 50%;
         animation-name: floating;
@@ -163,6 +162,6 @@ body {
         animation-iteration-count: infinite;
         animation-timing-function: ease-in-out;
         box-shadow: 0 0 50px 0 rgb(7, 255, 251);
-        margin-top: 20px; /* Add margin on top to create space */
+        margin-top: 50px; /* Add margin on top to create space */
     }
 }
