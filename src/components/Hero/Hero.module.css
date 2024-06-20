@@ -1,13 +1,17 @@
 @import "../../vars.css";
 
+body {
+    overflow-x: hidden; /* Ensure to hide horizontal overflow */
+    overflow-y: hidden; /* Ensure to hide vertical overflow */
+}
+
 .container {
-    position: relative;
+    min-height: 100vh;
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
     justify-content: space-between;
-    margin-top: 49px;
-    z-index: 1; /*Set it to 1 to ensure the menu item is functional*/
+    margin-top: 39px;
     margin-left: 10%;
     margin-right: 10%;
     text-align: center;
@@ -61,7 +65,8 @@
 }
 
 .heroImg {
-    width: 40%;
+    width: 25%; /* Reduce the width of the profile image */
+    max-width: 300px; /* Limit the maximum width */
     z-index: 1;
     border-radius: 50%;
     animation-name: floating;
@@ -69,8 +74,9 @@
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
     box-shadow: 0 0 50px 0 rgb(7, 255, 251);
-    margin-bottom: 20px;
+    margin-top: 20px; /* Add margin on top to create space */
 }
+
 
 @keyframes floating {
     0% {
@@ -86,10 +92,9 @@
 
 .topBlur {
     position: absolute;
-    width: 50vw;
+    width: 100%; /* Adjust to 100% to ensure it spans the entire width */
     height: 50vw;
-    min-width: 350px;
-    min-width: 350px;
+    min-width: 100%; /* Adjust as necessary */
     top: -128px;
     left: -10vw;
     border-radius: 764px;
@@ -100,10 +105,9 @@
 
 .bottomBlur {
     position: absolute;
-    width: 70vw;
+    width: 100%; /* Adjust to 100% to ensure it spans the entire width */
     height: 50vw;
-    min-width: 350px;
-    min-width: 250px;
+    min-width: 100%; /* Adjust as necessary */
     top: 246px;
     right: -25vw;
     border-radius: 764px;
@@ -114,14 +118,15 @@
 
 .navigation {
     display: flex;
-    position: absolute; /*Add this line to ensure I can move my navigation items*/
+    position: absolute;
     bottom: 0px;
     gap: 20px;
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
-    z-index: 2; /*Set it to 2 to ensure the navigation items are functional*/
-  }
+    width: 100%; /* Ensure full width */
+    z-index: 2;
+}
   
   .navigation a {
     margin: 5px 0;
@@ -131,7 +136,7 @@
     height: 60px;
   }
 
-@media screen and (max-width: 830px) {
+@media screen and (max-width: 835px) {
     .container {
         flex-direction: column-reverse;
     }
@@ -147,5 +152,17 @@
     .contactBtn {
         font-size: 16px;
         padding: 12px 20px;
+    }
+    .heroImg {
+        width: 60%; /* Reduce the width of the profile image */
+        max-width: 300px; /* Limit the maximum width */
+        z-index: 1;
+        border-radius: 50%;
+        animation-name: floating;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        box-shadow: 0 0 50px 0 rgb(7, 255, 251);
+        margin-top: 20px; /* Add margin on top to create space */
     }
 }
