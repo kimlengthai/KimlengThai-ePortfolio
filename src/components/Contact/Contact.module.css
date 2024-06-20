@@ -8,7 +8,7 @@
     flex-direction: row;
     justify-content: space-evenly;
     width: 100vw; /* Ensure full viewport width */
-    height: 590px;
+    height: 720px;
     position: relative; /* Use relative position */
     left: 50%;
     right: 50%;
@@ -47,6 +47,12 @@
     align-items: center;
     gap: 15px;
 }
+
+.link:hover {
+    background-color: var(--secondary-color-1);
+    border-radius: 10px;
+    width: 105%;
+  }
 
 .link a {
     color: var(--color-text);
