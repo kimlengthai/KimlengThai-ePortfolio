@@ -1,10 +1,5 @@
 @import "../../vars.css";
 
-body {
-    overflow-x: hidden; /* Ensure to hide horizontal overflow */
-    overflow-y: hidden; /* Ensure to hide vertical overflow */
-}
-
 .container {
     min-height: 100vh;
     display: flex;
@@ -16,6 +11,7 @@ body {
     margin-right: 10%;
     text-align: center;
     padding-bottom: 20px;
+    overflow: hidden;
 }
 
 .content {
@@ -65,8 +61,8 @@ body {
 }
 
 .heroImg {
-    width: 25%; /* Reduce the width of the profile image */
-    max-width: 300px; /* Limit the maximum width */
+    width: 45%; /* Reduce the width of the profile image */
+    max-width: 350px; /* Limit the maximum width */
     z-index: 1;
     border-radius: 50%;
     animation-name: floating;
@@ -93,7 +89,6 @@ body {
 .topBlur {
     position: absolute;
     width: 100%; /* Adjust to 100% to ensure it spans the entire width */
-    height: 50vw;
     min-width: 100%; /* Adjust as necessary */
     top: -128px;
     left: -10vw;
@@ -106,7 +101,6 @@ body {
 .bottomBlur {
     position: absolute;
     width: 100%; /* Adjust to 100% to ensure it spans the entire width */
-    height: 50vw;
     min-width: 100%; /* Adjust as necessary */
     top: 246px;
     right: -25vw;
