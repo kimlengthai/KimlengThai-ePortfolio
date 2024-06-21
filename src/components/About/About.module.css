@@ -79,6 +79,10 @@
     row-gap: 15px;
     margin-top: 10px;
   }
+
+  .aboutSection {
+    height: 100%;
+  }
 }
 
 .name {
