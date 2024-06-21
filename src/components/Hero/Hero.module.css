@@ -52,7 +52,7 @@
     padding: 17px 26px;
     box-shadow: 0 0 15px 0 rgb(7, 255, 251);
     transition: background-color 0.3s, color 0.3s, transform 0.3s;
-    margin-bottom: 15px;
+    margin-top: -30px;
 }
 
 .contactBtn:hover {
@@ -114,7 +114,7 @@
 .navigation {
     display: flex;
     position: absolute;
-    bottom: -20px;
+    bottom: 0px;
     gap: 20px;
     align-items: center;
     justify-content: center;
@@ -128,7 +128,7 @@
     font-size: 16px;
     color: var(--color-text);
     text-decoration: none;
-    height: 60px;
+    height: 20px;
   }
 
 @media screen and (max-width: 835px) {
