@@ -3,6 +3,7 @@ import htmlSkill from '../../../assets/skills/html.png';
 import cssSkill from '../../../assets/skills/css.png';
 import javascriptSkill from '../../../assets/skills/javascript.png';
 import reactSkill from '../../../assets/skills/react.png';
+import viteSkill from '../../../assets/skills/vite.jpeg';
 import reactNativeSkill from '../../../assets/skills/ReactNative.png';
 import materialUISkill from '../../../assets/skills/materialUI.png';
 import expoSkill from '../../../assets/skills/expo.png';
@@ -48,6 +49,12 @@ export const Experience = () => {
                 <img src={reactSkill} alt="React" className={styles.skillImage} />
               </div>
               <p>React</p>
+            </div>
+            <div className={styles.skill}>
+              <div className={styles.skillImageContainer}>
+                <img src={viteSkill} alt="Vite" className={styles.skillImage} />
+              </div>
+              <p>Vite</p>
             </div>
             <div className={styles.skill}>
               <div className={styles.skillImageContainer}>
