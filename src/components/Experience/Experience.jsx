@@ -249,7 +249,7 @@ export const Experience = () => {
             </li>
             <li className={styles.historyItem}>
               <a
-                href="https://github.com/kimlengthai/MMSfx" // Replace with actual URL for mms
+                href="https://github.com/kimlengthai/MembershipManagementSystem" // Replace with actual URL for mms
                 target='_blank'
                 rel='noopener noreferrer'
                 className={styles.historyLink}
