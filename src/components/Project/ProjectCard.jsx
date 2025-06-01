@@ -5,6 +5,7 @@ import styles from './ProjectCard.module.css';
 import LoginPageImage from '../../../assets/history/LoginPage.png';
 import zambarkImage from '../../../assets/history/zambark.png';
 import gameProfileImage from '../../../assets/projects/game_profile.png';
+import IoTLoginPageImage from '../../../assets/projects/IoTLoginPage.png';
 
 export const ProjectCard = ({ project }) => {
   const { title, image, description, skills, demo, source } = project;
@@ -17,6 +18,9 @@ export const ProjectCard = ({ project }) => {
     projectImage = zambarkImage;
   } else if (title === 'The Pursuit of Reflection') {
     projectImage = gameProfileImage;
+  } else if (title === 'IoTBay Web Application')
+  {
+    projectImage = IoTLoginPageImage;
   } else {
     projectImage = image; // Fallback to provided image if not matched
   }

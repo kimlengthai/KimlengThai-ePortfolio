@@ -12,11 +12,13 @@ import cSharpSkill from '../../../assets/skills/cSharp.png';
 import cPlusPlusSkill from '../../../assets/skills/cPlusPlus.png';
 import cSkill from '../../../assets/skills/c.png';
 import javaSkill from '../../../assets/skills/java.png';
+import jspSkill from '../../../assets/skills/JSP.png';
 import firebaseSkill from '../../../assets/skills/firebase.png';
 import mongodbSkill from '../../../assets/skills/mongoDB.png';
 import LoginPageImage from '../../../assets/history/LoginPage.png';
 import zambarkImage from '../../../assets/history/zambark.png';
 import mmsImage from '../../../assets/history/mms.png';
+import IoTLoginPageImage from '../../../assets/projects/IoTLoginPage.png';
 
 export const Experience = () => {
   return (
@@ -106,6 +108,12 @@ export const Experience = () => {
             </div>
             <div className={styles.skill}>
               <div className={styles.skillImageContainer}>
+                <img src={jspSkill} alt="JSP" className={styles.skillImage} />
+              </div>
+              <p>JSP</p>
+            </div>
+            <div className={styles.skill}>
+              <div className={styles.skillImageContainer}>
                 <img src={firebaseSkill} alt="Firebase" className={styles.skillImage} />
               </div>
               <p>Firebase</p>
@@ -121,6 +129,31 @@ export const Experience = () => {
         <div className={styles.historySection}>
           <h3 className={styles.workHistory}>Work History</h3>
           <ul className={styles.historyList}>
+          {/* IoTBay Java Web App */}
+            <li className={styles.historyItem}>
+              <a
+                href="https://github.com/kimlengthai/IoTBay" // Replace with actual URL if different
+                target='_blank'
+                rel='noopener noreferrer'
+                className={styles.historyLink}
+              >
+                 <img
+                  src={IoTLoginPageImage}
+                  alt="IoTBay Logo"
+                  className={styles.historyImage}
+                /> 
+                <div className={styles.historyItemDetails}>
+                  <h4>Java Web Application Developer, IoTBay Project</h4>
+                  <p>Feb, 2024 - Apr, 2024</p>
+                  <ul>
+                    <li>Developed a full-stack Java web app for an e-commerce platform focused on IoT products</li>
+                    <li>Implemented backend logic with Java Servlets and frontend with JSP</li>
+                    <li>Designed and connected to JavaDB (Apache Derby) database for product and user management</li>
+                    <li>Created responsive UI using Tailwind CSS, HTML, and JavaScript</li>
+                  </ul>
+                </div>
+              </a>
+            </li>
             <li className={styles.historyItem}>
               <a
                 href="https://github.com/kimlengthai/BabyUniversity" // Replace with actual URL for LoginPage
@@ -178,7 +211,7 @@ export const Experience = () => {
                   className={styles.historyImage}
                 />
                 <div className={styles.historyItemDetails}>
-                  <h4>Frontend/Backend Developer, University of Technology Sydney</h4>
+                  <h4>UX/UI Designer & Frontend Developer, University of Technology Sydney</h4>
                   <p>Sep, 2022 - Oct, 2022</p>
                   <ul>
                     <li>Developed a GUI, allowing users to add, remove, and update membership status</li>

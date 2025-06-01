@@ -5,6 +5,7 @@ import ProjectCard from './ProjectCard';
 import gameProfileImage from '../../../assets/projects/game_profile.png';
 import babyUniversityImage from '../../../assets/history/LoginPage.png';
 import zambarkImage from '../../../assets/history/zambark.png';
+import IoTLoginPageImage from '../../../assets/projects/IoTLoginPage.png';
 
 export const Project = () => {
   // Define project details manually
@@ -32,6 +33,14 @@ export const Project = () => {
       skills: ['HTML', 'CSS', 'JavaScript', 'Python', 'MongoDB'],
       demo: 'https://zambark.vercel.app/',
       source: 'https://github.com/kimlengthai/ZAMBARK-SUGGEST'
+    },
+    {
+      title: 'IoTBay',
+      image: IoTLoginPageImage,
+      description: 'A Java web app for managing user access, IoT devices, orders, and payments using JSP and Servlets.',
+      skills: ['Java', 'JSP', 'Servlets', 'JDBC', 'GlassFish'],
+      demo: 'http://localhost:32370/ISD_FINAL/',
+      source: 'https://github.com/kimlengthai/IoTBAY'
     }
     // Add more projects as needed
   ];
