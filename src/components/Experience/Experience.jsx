@@ -1,9 +1,15 @@
 import styles from './Experience.module.css';
 import htmlSkill from '../../../assets/skills/html.png';
 import cssSkill from '../../../assets/skills/css.png';
+import tailwindcssSkill from '../../../assets/skills/tailwindCSS.png';
 import javascriptSkill from '../../../assets/skills/javascript.png';
+import sqlSkill from '../../../assets/skills/sql.png';
 import reactSkill from '../../../assets/skills/react.png';
+import vueJSSkill from '../../../assets/skills/vueJS.png';
+import nextJSSkill from '../../../assets/skills/nextJS.png';
+import javaFXSkill from '../../../assets/skills/JavaFX.png';
 import viteSkill from '../../../assets/skills/vite.jpeg';
+import expressJSSkill from '../../../assets/skills/expressJS.png';
 import reactNativeSkill from '../../../assets/skills/ReactNative.png';
 import materialUISkill from '../../../assets/skills/materialUI.png';
 import expoSkill from '../../../assets/skills/expo.png';
@@ -15,6 +21,7 @@ import javaSkill from '../../../assets/skills/java.png';
 import jspSkill from '../../../assets/skills/JSP.png';
 import firebaseSkill from '../../../assets/skills/firebase.png';
 import mongodbSkill from '../../../assets/skills/mongoDB.png';
+import jdbcSkill from '../../../assets/skills/JDBC.png';
 import LoginPageImage from '../../../assets/history/LoginPage.png';
 import zambarkImage from '../../../assets/history/zambark.png';
 import mmsImage from '../../../assets/history/mms.png';
@@ -42,9 +49,21 @@ export const Experience = () => {
             </div>
             <div className={styles.skill}>
               <div className={styles.skillImageContainer}>
+                <img src={tailwindcssSkill} alt="Tailwind_CSS" className={styles.skillImage} />
+              </div>
+              <p>Tailwind CSS</p>
+            </div>
+            <div className={styles.skill}>
+              <div className={styles.skillImageContainer}>
                 <img src={javascriptSkill} alt="JavaScript" className={styles.skillImage} />
               </div>
               <p>JavaScript</p>
+            </div>
+            <div className={styles.skill}>
+              <div className={styles.skillImageContainer}>
+                <img src={sqlSkill} alt="SQL" className={styles.skillImage} />
+              </div>
+              <p>SQL</p>
             </div>
             <div className={styles.skill}>
               <div className={styles.skillImageContainer}>
@@ -54,9 +73,21 @@ export const Experience = () => {
             </div>
             <div className={styles.skill}>
               <div className={styles.skillImageContainer}>
-                <img src={viteSkill} alt="Vite" className={styles.skillImage} />
+                <img src={vueJSSkill} alt="Vue_JS" className={styles.skillImage} />
               </div>
-              <p>Vite</p>
+              <p>Vue.js</p>
+            </div>
+            <div className={styles.skill}>
+              <div className={styles.skillImageContainer}>
+                <img src={nextJSSkill} alt="Next_JS" className={styles.skillImage} />
+              </div>
+              <p>Next.js</p>
+            </div>
+            <div className={styles.skill}>
+              <div className={styles.skillImageContainer}>
+                <img src={expressJSSkill} alt="Express_JS" className={styles.skillImage} />
+              </div>
+              <p>Express.js</p>
             </div>
             <div className={styles.skill}>
               <div className={styles.skillImageContainer}>
@@ -75,6 +106,18 @@ export const Experience = () => {
                 <img src={expoSkill} alt="Expo" className={styles.skillImage} />
               </div>
               <p>Expo</p>
+            </div>
+            <div className={styles.skill}>
+              <div className={styles.skillImageContainer}>
+                <img src={javaFXSkill} alt="JavaFX" className={styles.skillImage} />
+              </div>
+              <p>JavaFX</p>
+            </div>
+            <div className={styles.skill}>
+              <div className={styles.skillImageContainer}>
+                <img src={viteSkill} alt="Vite" className={styles.skillImage} />
+              </div>
+              <p>Vite</p>
             </div>
             <div className={styles.skill}>
               <div className={styles.skillImageContainer}>
@@ -124,6 +167,12 @@ export const Experience = () => {
               </div>
               <p>MongoDB</p>
             </div>
+            <div className={styles.skill}>
+              <div className={styles.skillImageContainer}>
+                <img src={jdbcSkill} alt="JDBC" className={styles.skillImage} />
+              </div>
+              <p>JDBC</p>
+            </div>
           </div>
         </div>
         <div className={styles.historySection}>
@@ -143,8 +192,8 @@ export const Experience = () => {
                   className={styles.historyImage}
                 /> 
                 <div className={styles.historyItemDetails}>
-                  <h4>Java Web Application Developer, IoTBay Project</h4>
-                  <p>Feb, 2024 - Apr, 2024</p>
+                  <h4>Full-stack Developer, IoTBay Project</h4>
+                  <p>Mar, 2025 - May, 2025</p>
                   <ul>
                     <li>Developed a full-stack Java web app for an e-commerce platform focused on IoT products</li>
                     <li>Implemented backend logic with Java Servlets and frontend with JSP</li>

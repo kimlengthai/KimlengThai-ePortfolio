@@ -20,25 +20,36 @@ export const About = () => {
             <h3 className={styles.name}>Kimleng Thai</h3>
             <p><strong>University of Technology Sydney</strong></p>
             <ul>
-              <li>Bachelor of Engineering</li>
+              <li>Bachelor of Engineering (Honours)</li>
               <li>Major in Software Engineering</li>
-              <li>Feb 2022 - June 2026 (Expected)</li>
-              <li>I love to build things and solve problems</li>
-              <li>Maths tutor at Ezy Math Tutoring</li>
+              <li>Feb 2022 - Nov 2025 (Expected)</li>
+              <li>Driven to build impactful solutions, tackle complex problems, and explore new technologies to grow as an engineer.</li>
+              <li><strong>Casual Academic Tutor</strong> at University of Technology Sydney</li>
             </ul>
           </div>
         </div>
       </div>
       <div className={styles.buttons}>
-        <a href="mailto:kimleng.ngs@gmail.com" className={styles.contactButton}>
-          <MailOutlineIcon className={styles.icon} />
-          Contact me
-        </a>
-        <a href="https://www.linkedin.com/in/kimlengthai/" className={styles.connectButton} target="_blank" rel="noopener noreferrer">
-          <LinkedInIcon className={styles.icon} />
-          Connect with me
-        </a>
-      </div>
+      <a
+        href="mailto:kimleng.ngs@gmail.com"
+        className={styles.contactButton}
+        aria-label="Send an email to Kimleng Thai"
+      >
+        <MailOutlineIcon className={styles.icon} />
+        Contact me
+      </a>
+
+      <a
+        href="https://www.linkedin.com/in/kimlengthai/"
+        className={styles.connectButton}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Visit Kimleng Thai's LinkedIn profile"
+      >
+        <LinkedInIcon className={styles.icon} />
+        Connect with me
+      </a>
+    </div>
       <div className={styles.navigation}>
         <a href="#home">Home</a>
         <a href="#about">About</a>
