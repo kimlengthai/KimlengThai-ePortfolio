@@ -12,6 +12,12 @@
     height: 460px; /* Set a fixed height for consistency */
     overflow: hidden; /* Prevent overflow */
     box-sizing: border-box; /* Include padding and border in element's total width and height */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px 4px rgba(7, 255, 251, 0.5);
 }
 
 .image {
