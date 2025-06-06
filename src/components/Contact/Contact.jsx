@@ -13,7 +13,7 @@ export const Contact = () => {
     <ul className={styles.links}>
       <li className={styles.link}>
       <EmailIcon className={styles.icon} />
-      <a href="mailto:kimleng.ngs@gmail.com">kimleng.ngs@gmail.com</a>
+      <a href="mailto:kimleng.ngs@gmail.com" aria-label="Send email to Kimleng">kimleng.ngs@gmail.com</a>
       </li>
       <li className={styles.link}>
       <LinkedInIcon className={styles.icon} />

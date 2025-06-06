@@ -1,21 +1,17 @@
 @import "../../vars.css";
 
 .container {
-    color: var(--color-text);
-    margin-top: 120px;
-    background-color: var(--color-bg);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 100vw; /* Ensure full viewport width */
-    height: 720px;
-    position: relative; /* Use relative position */
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw; /* Compensate for the full viewport width */
-    margin-right: -50vw; /* Compensate for the full viewport width */
-    padding: 58px 10%;
-    gap: 10px;
+  max-width: 1200px;
+  margin: 120px auto 0 auto;
+  padding: 58px 20px;
+  background-color: var(--color-bg);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 10px;
+  min-height: 800px;
+  height: auto;
+  position: relative;
 }
 
 .text h2 {
@@ -42,16 +38,28 @@
     gap: 20px;
 }
 
+.icon {
+  font-size: 28px;
+  color: var(--color-text);
+}
+
+
 .link {
     display: flex; /* Display flex to ensure the icon and text are in the same line */
     align-items: center;
     gap: 15px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .link:hover {
     background-color: var(--secondary-color-1);
     border-radius: 10px;
-    width: 105%;
+    transform: scale(1.05);
+  }
+
+  .link:hover .icon {
+  color: var(--primary-color);
+  transform: scale(1.2);
   }
 
 .link a {
@@ -60,6 +68,11 @@
     font-size: 18px;
     font-weight: 400;
     letter-spacing: 1px;
+}
+
+.link a:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 3px;
 }
 
 @media screen and (max-width: 830px) {
@@ -86,6 +99,10 @@
 
     .text p {
         font-size: 16px;
+    }
+
+    .links {
+    align-items: center;
     }
 
     .links {
