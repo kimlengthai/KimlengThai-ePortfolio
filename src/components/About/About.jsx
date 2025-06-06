@@ -24,6 +24,7 @@ export const About = () => {
               <li>Major in Software Engineering</li>
               <li>Feb 2022 - Nov 2025 (Expected)</li>
               <li>Driven to build impactful solutions, tackle complex problems, and explore new technologies to grow as an engineer.</li>
+              <li>Actively seeking internships and full-time opportunities.</li>
               <li><strong>Casual Academic Tutor</strong> at University of Technology Sydney</li>
             </ul>
           </div>
