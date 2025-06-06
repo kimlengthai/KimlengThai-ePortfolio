@@ -1,162 +1,225 @@
 @import "../../vars.css";
 
 .container {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 39px;
-    margin-left: 10%;
-    margin-right: 10%;
-    text-align: center;
-    padding-bottom: 20px;
-    overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;  /* Center vertically */
+  margin: -70px 10%;
+  text-align: center;
+  padding-bottom: 80px; /* Add space for fixed nav */
+  overflow: hidden;
+  position: relative;
 }
 
 .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: var(--color-text);
-    z-index: 1;
-    height: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--color-text);
+  z-index: 1;
+  /* Use auto height for flexibility */
+  height: auto;
+  max-width: 480px;
+  width: 100%;
+  padding: 0 10px; /* padding on smaller screens */
 }
 
 .title {
-    font-size: 30px;
-    font-weight: bold;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    font-family: Helvetica;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: -15px;
+  margin-bottom: 20px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.2;
 }
 
 .description {
-    font-size: 20px;
-    font-family: Helvetica;
-    font-weight: 400;
-    margin-bottom: 52px;
-    text-align: center; /* Center align the text horizontally */
-    display: flex; /* Use flexbox */
-    align-items: center; /* Align items vertically */
-    justify-content: center; /* Center justify the content horizontally */
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 52px;
+  text-align: left;
+  line-height: 1.5;
 }
 
 .contactBtn {
-    text-decoration: none;
-    background-color: var(--neutral-color-3);
-    color: var(--primary-color);
-    border-radius: 15px;
-    font-size: 20px;
-    font-weight: 600;
-    padding: 17px 26px;
-    box-shadow: 0 0 15px 0 rgb(7, 255, 251);
-    transition: background-color 0.3s, color 0.3s, transform 0.3s;
-    margin-top: -30px;
+  background-color: var(--neutral-color-3);
+  color: var(--primary-color);
+  border-radius: 15px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 17px 32px;
+  box-shadow: 0 8px 20px rgba(7, 255, 251, 0.6);
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  margin-top: -30px;
+  display: inline-block;
+  width: auto;
+  min-width: 180px; /* ensures button doesn't get too narrow */
+  text-align: center;
+  white-space: nowrap;
 }
 
 .contactBtn:hover {
-    background-color: var(--primary-color);
-    color: var(--neutral-color-3);
-    transform: scale(1.05); /* Zoom in effect */
+  background-color: var(--primary-color);
+  color: var(--neutral-color-3);
+  transform: scale(1.1);
 }
 
 .heroImg {
-    width: 45%; /* Reduce the width of the profile image */
-    max-width: 350px; /* Limit the maximum width */
-    z-index: 1;
-    border-radius: 50%;
-    animation-name: floating;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    box-shadow: 0 0 50px 0 rgb(7, 255, 251);
-    margin-top: 20px; /* Add margin on top to create space */
+  width: 45vw;           /* width relative to viewport */
+  max-width: 300px;      /* cap max width */
+  min-width: 150px;      /* ensure it doesn't shrink too much */
+  height: auto;
+  z-index: 1;
+  border-radius: 50%;
+  box-shadow: 0 0 50px 0 rgb(7, 255, 251);
+  margin-top: 10px;
+  margin-bottom: 40px; /* space below image */
+  object-fit: cover; /* keep aspect ratio */
 }
 
-
+/* Animation */
 @keyframes floating {
-    0% {
-        transform: translate(0, 0px);
-    }
-    50% {
-        transform: translate(0, 10px);
-    }
-    100% {
-        transform: translate(0, -0px);
-    }
+  0% { transform: translate(0, 0px); }
+  50% { transform: translate(0, 10px); }
+  100% { transform: translate(0, 0px); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.content {
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.heroImg {
+  animation: fadeInUp 1s ease forwards 0.3s, floating 3s ease-in-out infinite;
+}
+
+.topBlur, .bottomBlur {
+  position: absolute;
+  width: 100%;
+  min-width: 100%;
+  border-radius: 764px;
+  background-color: var(--primary-color);
+  filter: blur(100px);
+  z-index: 0;
 }
 
 .topBlur {
-    position: absolute;
-    width: 100%; /* Adjust to 100% to ensure it spans the entire width */
-    min-width: 100%; /* Adjust as necessary */
-    top: -128px;
-    left: -10vw;
-    border-radius: 764px;
-    background-color: var(--color-primary);
-    filter: blur(100px);
-    z-index: 0;
+  top: -128px;
+  left: -10vw;
 }
 
 .bottomBlur {
-    position: absolute;
-    width: 100%; /* Adjust to 100% to ensure it spans the entire width */
-    min-width: 100%; /* Adjust as necessary */
-    top: 246px;
-    right: -25vw;
-    border-radius: 764px;
-    background-color: var(--color-primary);
-    filter: blur(100px);
-    z-index: 0;
+  top: 246px;
+  right: -25vw;
 }
 
 .navigation {
-    display: flex;
-    position: absolute;
-    bottom: 0px;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-    width: 100%; /* Ensure full width */
-    z-index: 2;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--color-navbar);
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px 0;
+  box-shadow: 0 -3px 8px rgba(0,0,0,0.1);
+  z-index: 999;
 }
-  
-  .navigation a {
-    margin: 5px 0;
-    font-size: 16px;
-    color: var(--color-text);
-    text-decoration: none;
-    height: 20px;
-  }
 
+.navigation a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 5px 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 5px;
+}
+
+.navigation a:hover {
+  background-color: var(--secondary-color-1);
+  color: var(--neutral-color-1);
+}
+
+/* Responsive Breakpoints */
+
+/* Tablets and below */
 @media screen and (max-width: 835px) {
-    .container {
-        flex-direction: column-reverse;
-    }
-    .content {
-        align-items: center;
-    }
-    .title {
-        font-size: 24px;
-    }
-    .description {
-        font-size: 16px;
-    }
-    .contactBtn {
-        font-size: 16px;
-        padding: 12px 20px;
-    }
-    .heroImg {
-        width: 80%; /* Reduce the width of the profile image */
-        z-index: 1;
-        border-radius: 50%;
-        animation-name: floating;
-        animation-duration: 3s;
-        animation-iteration-count: infinite;
-        animation-timing-function: ease-in-out;
-        box-shadow: 0 0 50px 0 rgb(7, 255, 251);
-        margin-top: 50px; /* Add margin on top to create space */
-    }
+  .container {
+    flex-direction: column-reverse;
+    margin-left: 5%;
+    margin-right: 5%;
+    gap: 30px;
+  }
+  .content {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+  .description {
+    font-size: 1rem;
+    text-align: center; /* center text for small screens */
+  }
+  .contactBtn {
+    font-size: 1rem;
+    padding: 12px 24px;
+    min-width: 140px;
+    margin-top: 0;
+  }
+  .heroImg {
+    width: 60vw;
+    max-width: 300px;
+    min-width: 180px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navigation {
+    gap: 15px;
+    padding: 10px 0;
+  }
+  .navigation a {
+    font-size: 0.875rem;
+    padding: 5px 8px;
+  }
+}
+
+/* Phones and very small screens */
+@media screen and (max-width: 480px) {
+  .container {
+    margin-left: 3%;
+    margin-right: 3%;
+    gap: 20px;
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+  .description {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  .contactBtn {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+    min-width: 120px;
+  }
+  .heroImg {
+    width: 70vw;
+    max-width: 250px;
+    min-width: 150px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
 }

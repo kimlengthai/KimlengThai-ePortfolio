@@ -6,8 +6,10 @@
   flex-direction: column;
   align-items: flex-start;
   padding-top: 61px;
+  padding-left: 61px;
   z-index: 2;
-  margin: 0 10%;
+  /* margin: 0 10%; */
+  background-color: var(--color-navbar);
 }
 
 .title {
@@ -24,11 +26,12 @@
 
 .menu {
   position: absolute;
-  right: -50px;
-  margin-right: 10%;
+  right: 10px; /* Anchors it to the right */
+  top: 10;   /* Optional: anchors it to the top if needed */
+  display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 11px;
+  gap: 10px;
   z-index: 3;
 }
 
@@ -39,9 +42,12 @@
   gap: 13px;
   list-style: none;
   border-radius: 10px;
-  background-color: #FFFFFF;
+  /* background-color: var(--color-navbar); */
   padding: 24px 33px;
-  box-shadow: 0 0 10px 0 rgb(7, 255, 251);
+  backdrop-filter: blur(6px);
+  background-color: rgba(245, 238, 220, 0.85);
+  transition: all 0.3s ease;
+  /* box-shadow: 0 0 10px 0 rgb(7, 255, 251); */
   width: 160px;
 }
 
