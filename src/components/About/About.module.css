@@ -1,8 +1,8 @@
 .aboutSection {
-  padding: 20px;
+  padding: 40px 20px 20px;
   text-align: center;
-  margin-top: 10px;
-  height: 830px;
+  margin-top: 40px;
+  height: 800px;
 }
 
 .aboutContent {
@@ -10,6 +10,11 @@
   flex-direction: column;
   align-items: center;
   margin-top: 10px;
+}
+
+.infoBox:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 25px rgba(7, 255, 251, 0.5);
 }
 
 .title {
@@ -22,19 +27,13 @@
   margin-bottom: 20px;
 }
 
-@media (min-width: 830px) {
-  .aboutContent {
-    flex-direction: row;
-    justify-content: center;
-    line-height: 25px;
-  }
-}
-
 .aboutImage {
-  width: 350px;
-  height: 300px;
+  width: 100%;
+  max-width: 350px; /* Keeps size reasonable on wide screens */
+  height: auto;
   border-radius: 5%;
   margin: 10px;
+  object-fit: cover;
 }
 
 .infoBox {
@@ -50,16 +49,7 @@
   box-sizing: border-box;
   margin-top: 20px;
   box-shadow: 0 0 15px 0 rgb(7, 255, 251);
-  
-}
-
-@media (min-width: 830px) {
-  .infoBox {
-    flex-direction: row;
-    margin-bottom: 20px;
-    align-items: center;
-    justify-content: center;
-  }
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .aboutInfo {
@@ -70,19 +60,6 @@
   row-gap: 15px;
   width: 100%;
   box-sizing: border-box;
-}
-
-@media (max-width: 830px) {
-  .aboutInfo {
-    text-align: left;
-    margin-left: 25px;
-    row-gap: 15px;
-    margin-top: 10px;
-  }
-
-  .aboutSection {
-    height: 100%;
-  }
 }
 
 .name {
@@ -137,22 +114,36 @@
   margin-right: 8px;
 }
 
+/* Navigation bar */
 .navigation {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--color-navbar);
   display: flex;
-  flex-direction: row;
-  gap: 20px;
-  align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
+  gap: 20px;
+  padding: 15px 0;
+  box-shadow: 0 -3px 8px rgba(0,0,0,0.1);
+  z-index: 999;
 }
 
 .navigation a {
-  margin: 5px 0;
-  font-size: 16px;
   color: var(--color-text);
   text-decoration: none;
-  height: 60px;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 5px 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 5px;
 }
+
+.navigation a:hover {
+  background-color: var(--secondary-color-1);
+  color: var(--neutral-color-1);
+}
+
 
 .icons {
   display: flex;
@@ -160,10 +151,78 @@
   gap: 20px;
   align-items: center;
   justify-content: center;
+  margin-bottom: 70px; /* enough space to sit above bottom navbar */
 }
 
 .icons a {
-  margin: 10px 0;
+  margin: -10px 0;
   color: #333;
   font-size: 24px;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.icons a:hover {
+  color: var(--neutral-color-3); /* same hover text color as buttons */
+  background-color: var(--primary-color);
+  transform: scale(1.1);
+  box-shadow: 0 0 12px rgb(7, 255, 251);
+}
+
+@media (min-width: 830px) {
+  .aboutContent {
+    flex-direction: row;
+    justify-content: center;
+    line-height: 25px;
+  }
+  .infoBox {
+    flex-direction: row;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 830px) {
+  .aboutInfo {
+    text-align: left;
+    margin-left: 25px;
+    row-gap: 15px;
+    margin-top: 10px;
+  }
+
+  .aboutSection {
+    height: 100%;
+  }
+  .icons 
+  {
+    bottom: -20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .aboutImage {
+    max-width: 90%;
+    height: auto;
+  }
+  .navigation {
+    gap: 10px;
+    padding: 12px 3%;
+    font-size: 0.5rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .navigation a {
+    padding: 6px 10px;
+    font-size: 0.65rem;
+  }
+
+  .buttons {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+    min-width: 120px;
+  }
 }

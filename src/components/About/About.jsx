@@ -50,18 +50,18 @@ export const About = () => {
         Connect with me
       </a>
     </div>
-      <div className={styles.navigation}>
+      <nav className={styles.navigation} aria-label="Secondary navigation">
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
         <a href="#project">Projects</a>
         <a href="#contact">Contact</a>
-      </div>
+      </nav>
       <div className={styles.icons}>
-        <a href="https://github.com/kimlengthai" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/kimlengthai" target="_blank" title="GitHub" rel="noopener noreferrer">
           <GitHubIcon />
         </a>
-        <a href="https://www.linkedin.com/in/kimlengthai/" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/kimlengthai/" target="_blank" title="LinkedIn" rel="noopener noreferrer">
           <LinkedInIcon />
         </a>
       </div>
