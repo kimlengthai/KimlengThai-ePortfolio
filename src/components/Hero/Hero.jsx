@@ -4,18 +4,32 @@ import profilePicture from '/assets/profile/profilePicture.jpeg';
 export const Hero = () => {
   return (
     <>
-      <section className={styles.container}>
+      <header className={styles.container} aria-label="Introduction">
         <div className={styles.content}>
           <h1 className={styles.title}>Hi, I&apos;m Kimleng Thai!</h1>
-          <p className={styles.description}>I love to build things and I like coding.</p>
-          <a href="mailto:kimleng.ngs@gmail.com" className={styles.contactBtn}>Contact Me</a>
+          <p className={styles.description}> 
+            I&apos;m a final-year student studying Software Engineering at UTS with a GPA of 6 out of 7.
+            I enjoy solving problems and learning new technologies, which is why I chose this field.
+          </p>
+          <p className={styles.description}>
+            Outside of coding and uni, I enjoy playing Football, watching NBA, and listening to podcasts.
+          </p>
+          <a href="mailto:kimleng.ngs@gmail.com" className={styles.contactBtn}>
+            Contact Me
+          </a>
         </div>
-        <img src={profilePicture} alt="My profile image" className={styles.heroImg} />
-        <div className={styles.topBlur}></div>
-        <div className={styles.bottomBlur}></div>
-      </section>
+        <img
+          src={profilePicture}
+          alt="Kimleng Thai"
+          className={styles.heroImg}
+          loading="lazy"
+          decoding="async"
+        />
+        <div className={styles.topBlur} aria-hidden="true"></div>
+        <div className={styles.bottomBlur} aria-hidden="true"></div>
+      </header>
 
-      <nav className={styles.navigation}>
+      <nav className={styles.navigation} aria-label="Primary navigation">
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#experience">Experience</a>

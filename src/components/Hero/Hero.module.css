@@ -1,48 +1,52 @@
 @import "../../vars.css";
 
+/* Container and content for desktop */
 .container {
   min-height: 100vh;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;  /* Center vertically */
-  margin: -70px 10%;
-  text-align: center;
-  padding-bottom: 80px; /* Add space for fixed nav */
-  overflow: hidden;
+  justify-content: space-between;
+  margin: 0 10%;
+  text-align: left;
+  padding-bottom: 0px;
+  overflow: visible;
   position: relative;
 }
 
 .content {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   color: var(--color-text);
   z-index: 1;
-  /* Use auto height for flexibility */
   height: auto;
-  max-width: 480px;
+  max-width: 500px;
   width: 100%;
-  padding: 0 10px; /* padding on smaller screens */
+  padding: 0 20px;
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.3s;
 }
 
 .title {
   font-size: 2rem;
   font-weight: 700;
-  margin-top: -15px;
+  margin-top: 0px;
   margin-bottom: 20px;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 1.2;
 }
 
 .description {
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 400;
-  margin-bottom: 52px;
+  margin-bottom: 12px;      /* compact spacing */
   text-align: left;
-  line-height: 1.5;
+  line-height: 1.4;
+  max-width: 480px;
 }
 
+/* Move contactBtn down and adjust sizing */
 .contactBtn {
   background-color: var(--neutral-color-3);
   color: var(--primary-color);
@@ -50,12 +54,12 @@
   font-size: 1.25rem;
   font-weight: 600;
   padding: 17px 32px;
-  box-shadow: 0 8px 20px rgba(7, 255, 251, 0.6);
-  transition: background-color 0.3s, color 0.3s, transform 0.3s;
-  margin-top: -30px;
+  box-shadow: 0 8px 30px rgba(7, 255, 251, 0.6);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  margin-top: 20px;  /* moved down for spacing */
   display: inline-block;
   width: auto;
-  min-width: 180px; /* ensures button doesn't get too narrow */
+  min-width: 180px;
   text-align: center;
   white-space: nowrap;
 }
@@ -66,20 +70,22 @@
   transform: scale(1.1);
 }
 
+/* Hero Image */
 .heroImg {
-  width: 45vw;           /* width relative to viewport */
-  max-width: 300px;      /* cap max width */
-  min-width: 150px;      /* ensure it doesn't shrink too much */
+  width: 35vw;
+  max-width: 350px;
+  min-width: 150px;
   height: auto;
   z-index: 1;
   border-radius: 50%;
-  box-shadow: 0 0 50px 0 rgb(7, 255, 251);
-  margin-top: 10px;
-  margin-bottom: 40px; /* space below image */
-  object-fit: cover; /* keep aspect ratio */
+  box-shadow: 0 0 50px rgb(7, 255, 251);
+  margin-top: 0;
+  margin-bottom: 0;
+  object-fit: cover;
+  animation: fadeInUp 1s ease forwards 0.3s, floating 3s ease-in-out infinite;
 }
 
-/* Animation */
+/* Animation keyframes */
 @keyframes floating {
   0% { transform: translate(0, 0px); }
   50% { transform: translate(0, 10px); }
@@ -91,35 +97,26 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-.content {
-  animation: fadeInUp 1s ease forwards;
-  animation-delay: 0.3s;
-}
-
-.heroImg {
-  animation: fadeInUp 1s ease forwards 0.3s, floating 3s ease-in-out infinite;
-}
-
+/* Background blurs */
 .topBlur, .bottomBlur {
   position: absolute;
-  width: 100%;
-  min-width: 100%;
-  border-radius: 764px;
+  border-radius: 50%; /* now actually makes it circular */
   background-color: var(--primary-color);
-  filter: blur(100px);
+  filter: blur(120px); /* slightly more blur for balance */
   z-index: 0;
 }
 
 .topBlur {
-  top: -128px;
-  left: -10vw;
+  top: -100px;
+  left: -5vw;
 }
 
 .bottomBlur {
-  top: 246px;
-  right: -25vw;
+  bottom: -80px;
+  right: -10vw;
 }
 
+/* Navigation bar */
 .navigation {
   position: fixed;
   bottom: 0;
@@ -128,7 +125,7 @@
   background-color: var(--color-navbar);
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 20px;
   padding: 15px 0;
   box-shadow: 0 -3px 8px rgba(0,0,0,0.1);
   z-index: 999;
@@ -158,17 +155,26 @@
     margin-left: 5%;
     margin-right: 5%;
     gap: 30px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
   }
   .content {
     max-width: 100%;
     padding: 0 20px;
+    align-items: center;
   }
   .title {
     font-size: 1.5rem;
+    margin-top: -20px;
   }
+  /* Description font size consistent */
   .description {
     font-size: 1rem;
-    text-align: center; /* center text for small screens */
+    text-align: center;
+  }
+  .content p:not(.description) {
+    text-align: center;
   }
   .contactBtn {
     font-size: 1rem;
@@ -182,17 +188,6 @@
     min-width: 180px;
     margin-top: 30px;
     margin-bottom: 30px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .navigation {
-    gap: 15px;
-    padding: 10px 0;
-  }
-  .navigation a {
-    font-size: 0.875rem;
-    padding: 5px 8px;
   }
 }
 
@@ -210,16 +205,32 @@
     font-size: 0.9rem;
     text-align: center;
   }
+  .content p:not(.description) {
+    font-size: 0.9rem;
+  }
   .contactBtn {
     font-size: 0.9rem;
     padding: 10px 20px;
     min-width: 120px;
   }
   .heroImg {
-    width: 70vw;
-    max-width: 250px;
+    width: 40vw;  
+    max-width: 200px;
     min-width: 150px;
     margin-top: 25px;
     margin-bottom: 25px;
+  }
+
+  .navigation {
+    gap: 10px;
+    padding: 12px 3%;
+    font-size: 0.5rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .navigation a {
+    padding: 6px 10px;
+    font-size: 0.65rem;
   }
 }
