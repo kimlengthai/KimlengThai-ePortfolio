@@ -43,10 +43,16 @@
   align-items: center;
   gap: 11px;
   width: calc(100% / 7);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill:hover {
+  transform: scale(1.1);
 }
 
 .skillImageContainer {
   background-color: var(--neutral-color-1);
+  box-shadow: 0 0 12px rgb(7, 255, 251);
   border-radius: 100%;
   display: flex;
   align-items: center;
@@ -80,6 +86,12 @@
 .historyItem {
   margin-bottom: 40px;
   box-shadow: 0 0 15px 0 rgb(7, 255, 251);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.historyItem:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px 4px rgba(7, 255, 251, 0.5);
 }
 
 .historyLink {
