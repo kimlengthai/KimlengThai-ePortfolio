@@ -8,7 +8,7 @@ export const Hero = () => {
         <div className={styles.content}>
           <h1 className={styles.title}>Hey there, I&apos;m Kimleng Thai!</h1>
           <p className={styles.description}> 
-            I&apos;m a final-year student studying Software Engineering at UTS.
+            A final-year student studying Software Engineering at UTS.
             I enjoy solving problems and learning new technologies, which is why I chose this field.
           </p>
           <p className={styles.description}>
