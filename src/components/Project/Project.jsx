@@ -53,6 +53,14 @@ export const Project = () => {
           <ProjectCard key={id} project={project} />
         ))}
       </div>
+
+      <nav className={styles.navigation} aria-label="Secondary navigation">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#project">Projects</a>
+      <a href="#contact">Contact</a>
+      </nav>
     </section>
   );
 }
