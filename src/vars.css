@@ -1,28 +1,25 @@
 :root {
-    /* 🌞 Light Mode (Default) */
-    --color-text: #231F20;
-    --primary-color: #F6F7EB;
-    --secondary-color-1: #E2C799;
-    --secondary-color-2: #FF6F61;
-    --neutral-color-1: #FFFFFF;
-    --neutral-color-2: #E0E0E0;
-    --neutral-color-3: #333333;
-    --color-bg: #FFFCF2;
-    --color-navbar: #F5EEDC;
-    --cool-accent: #4A6C6F;
+  /* light mode */
+  --color-text: #231F20;
+  --primary-color: #F6F7EB;
+  --secondary-color-1: #E2C799;
+  --secondary-color-2: #FF6F61;
+  --neutral-color-1: #FFFFFF;
+  --neutral-color-2: #E0E0E0;
+  --neutral-color-3: #333333;
+  --color-bg: #FFFCF2;
+  --color-navbar: #F5EEDC;
+  --cool-accent: #4A6C6F;
 }
 
-/* 🌙 Dark Mode Overrides */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-text: #F6F7EB;          /* light text on dark bg */
-    --primary-color: #2E2E2E;       /* darker neutral base */
-    --secondary-color-1: #FF9F66;   /* brighter tan/orange pop */
-    --secondary-color-2: #FF6F61;   /* keep the accent (works well) */
-    --neutral-color-1: #1A1A1A;     /* deepest background */
-    --neutral-color-2: #333333;     /* for cards/sections */
-    --neutral-color-3: #AAAAAA;     /* lighter gray for contrast */
-    --color-bg: #121212;            /* general page background */
-    --color-navbar: #1F1F1F;        /* navbar background */
-  }
+:root.dark {
+  --color-text: #F6F7EB;
+  --primary-color: #2E2E2E;
+  --secondary-color-1: #FF9F66;
+  --secondary-color-2: #FF6F61;
+  --neutral-color-1: #1A1A1A;
+  --neutral-color-2: #333333;
+  --neutral-color-3: #AAAAAA;
+  --color-bg: #121212;
+  --color-navbar: #1F1F1F;
 }

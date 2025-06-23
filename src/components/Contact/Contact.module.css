@@ -4,7 +4,7 @@
   max-width: 1200px;
   margin: 120px auto 0 auto;
   padding: 58px 20px;
-  background-color: var(--color-bg);
+  background-color: var(--color-bg); 
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -25,9 +25,10 @@
 }
 
 .text p {
-    font-size: 20px;
-    font-weight: 400;
-    letter-spacing: 1px;
+  color: var(--color-text);
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 1px;
 }
 
 .links {
@@ -42,7 +43,6 @@
   font-size: 28px;
   color: var(--color-text);
 }
-
 
 .link {
     display: flex; /* Display flex to ensure the icon and text are in the same line */
