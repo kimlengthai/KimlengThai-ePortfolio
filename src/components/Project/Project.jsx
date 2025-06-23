@@ -6,6 +6,9 @@ import gameProfileImage from '../../../assets/projects/game_profile.png';
 import babyUniversityImage from '../../../assets/history/LoginPage.png';
 import zambarkImage from '../../../assets/history/zambark.png';
 import IoTLoginPageImage from '../../../assets/projects/IoTLoginPage.png';
+import machineLearningImage from '../../../assets/projects/machineLearning.png';
+
+import recipeImage from '../../../assets/projects/recipeImage.png';
 
 export const Project = () => {
   // Define project details manually
@@ -41,8 +44,31 @@ export const Project = () => {
       skills: ['Java', 'JSP', 'Servlets', 'JDBC', 'GlassFish'],
       demo: 'https://drive.google.com/file/d/1oDDZo-kvfzsfUJmYvANj-1lC1tiWUvpo/view?usp=sharing',
       source: 'https://github.com/kimlengthai/IoTBAY'
+    },
+    {
+      title: 'Decision Tree Classification',
+      image: machineLearningImage,
+      description: 'A study of a decision tree model, focusing on theoretical fundamentals.',
+      skills: ['Python', 'Machine Learning', 'Decision Tree', 'Colab-Notebook'],
+      demo: 'https://colab.research.google.com/drive/1xxFlUDODqGzgJgZuvKkvRKehHhGYVF25?usp=sharing',
+      source: 'https://github.com/kimlengthai/study-a-fundamental-ml-model'
+    },
+    {
+      title: 'Recreation of the classic Pac-Man game',
+      image: machineLearningImage,
+      description: 'This game features a student-themed setting. It was built using C# and Unity Engine.',
+      skills: ['C#', 'Unity', 'Pac-Student'],
+      /* demo: */
+      source: 'https://github.com/kimlengthai/Assessment4'
+    },
+    {
+      title: 'Recipe Application',
+      image: recipeImage,
+      description: 'A React-based Recipe App for users to search, view, and favorite their recipes.',
+      skills: ['React', 'React Router', 'Context API', 'Tailwind CSS'],
+      demo: 'https://github.com/kimlengthai/recipe-app/blob/main/README.md',
+      source: 'https://github.com/kimlengthai/recipe-app'
     }
-    // Add more projects as needed
   ];
 
   return (
