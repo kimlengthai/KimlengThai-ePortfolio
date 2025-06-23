@@ -7,7 +7,7 @@ import babyUniversityImage from '../../../assets/history/LoginPage.png';
 import zambarkImage from '../../../assets/history/zambark.png';
 import IoTLoginPageImage from '../../../assets/projects/IoTLoginPage.png';
 import machineLearningImage from '../../../assets/projects/machineLearning.png';
-
+import pacStudentImage from '../../../assets/projects/pacStudentImage.png';
 import recipeImage from '../../../assets/projects/recipeImage.png';
 
 export const Project = () => {
@@ -55,7 +55,7 @@ export const Project = () => {
     },
     {
       title: 'Recreation of the classic Pac-Man game',
-      image: machineLearningImage,
+      image: pacStudentImage,
       description: 'This game features a student-themed setting. It was built using C# and Unity Engine.',
       skills: ['C#', 'Unity', 'Pac-Student'],
       /* demo: */
