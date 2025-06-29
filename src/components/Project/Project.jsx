@@ -9,6 +9,7 @@ import IoTLoginPageImage from '../../../assets/projects/IoTLoginPage.png';
 import machineLearningImage from '../../../assets/projects/machineLearning.png';
 import pacStudentImage from '../../../assets/projects/pacStudentImage.png';
 import recipeImage from '../../../assets/projects/recipeImage.png';
+import nbaWebsite from '../../../assets/projects/nbaWebsite.png';
 
 export const Project = () => {
   // Define project details manually
@@ -68,6 +69,14 @@ export const Project = () => {
       skills: ['React', 'React Router', 'Context API', 'Tailwind CSS'],
       demo: 'https://github.com/kimlengthai/recipe-app/blob/main/README.md',
       source: 'https://github.com/kimlengthai/recipe-app'
+    },
+    {
+      title: 'NBA Jersey Website',
+      image: nbaWebsite,
+      description: 'A MERN stack website for NBA jerseys.',
+      skills: ['MongoDB', 'Express', 'React', 'Node', 'Bootstrap'],
+      /* demo: */
+      source: 'https://github.com/kimlengthai/nba-jersey-app'
     }
   ];
 
