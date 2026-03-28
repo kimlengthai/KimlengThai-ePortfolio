@@ -25,7 +25,7 @@
   font-weight: 700;
   letter-spacing: 0.3px;
   text-decoration: none;
-  color: var(--color-text);
+  color: var(--color-navbar-text);
   user-select: none;
   transition: color 0.3s ease, transform 0.3s ease;
 }
@@ -51,7 +51,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-text);
+  color: var(--color-navbar-text);
   transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -90,6 +90,7 @@
 
 .menuBtn {
   font-size: 1.8rem !important;
+  color: var(--color-navbar-text);
 }
 
 .menuItems {
@@ -129,7 +130,7 @@
 .menuItems a {
   font-size: 15px;
   font-weight: 600;
-  color: var(--color-text);
+  color: var(--color-navbar-text, #F6F7EB);
   text-decoration: none;
   width: 100%;
   display: flex;

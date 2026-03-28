@@ -1,25 +1,43 @@
 :root {
-  /* light mode */
-  --color-text: #231F20;
-  --primary-color: #F6F7EB;
-  --secondary-color-1: #E2C799;
-  --secondary-color-2: #FF6F61;
-  --neutral-color-1: #FFFFFF;
-  --neutral-color-2: #E0E0E0;
-  --neutral-color-3: #333333;
-  --color-bg: #FFFCF2;
-  --color-navbar: #F5EEDC;
-  --cool-accent: #4A6C6F;
+  --color-text: #1F1F1F;
+  --color-text-secondary: #555555;
+
+  --color-bg: #F8F6F1;
+  --color-navbar: #EFE9DD;
+
+  --color-navbar-text: #F6F7EB;
+
+  --color-surface: #FFFFFF;
+  --color-card-bg: rgba(255, 255, 255, 0.9);
+
+  --color-accent: #00cfcf;
+  --color-accent-soft: rgba(0, 207, 207, 0.08);
+  --color-accent-border: rgba(0, 207, 207, 0.18);
+
+  --color-primary-button: #2B2B2B;
+  --color-primary-button-text: #FFFFFF;
+
+  --color-border: #E5E2DA;
 }
 
 :root.dark {
   --color-text: #F6F7EB;
-  --primary-color: #2E2E2E;
-  --secondary-color-1: #FF9F66;
-  --secondary-color-2: #FF6F61;
-  --neutral-color-1: #1A1A1A;
-  --neutral-color-2: #333333;
-  --neutral-color-3: #AAAAAA;
+  --color-text-secondary: #CCCCCC;
+
   --color-bg: #121212;
   --color-navbar: #1F1F1F;
+
+  --color-navbar-text: #F6F7EB;
+
+  --color-surface: #2E2E2E;
+  --color-card-bg: rgba(255, 255, 255, 0.05);
+
+  --color-accent: #00fcfc;
+  --color-accent-soft: rgba(0, 252, 252, 0.1);
+  --color-accent-border: rgba(0, 252, 252, 0.2);
+
+  --color-primary-button: #F6F7EB;
+  --color-primary-button-text: #121212;
+
+  --color-border: #333333;
 }

@@ -24,7 +24,7 @@ export const Hero = () => {
           <div className={styles.statsRow}>
             <div className={styles.statCard}>
               <span className={styles.statValue}>1+ Year</span>
-              <span className={styles.statLabel}>Software Experience</span>
+              <span className={styles.statLabel}>Industry Experience</span>
             </div>
 
             <div className={styles.statCard}>

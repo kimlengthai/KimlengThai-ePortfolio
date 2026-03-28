@@ -116,7 +116,7 @@
   flex-direction: row;
   align-items: flex-start;
   gap: 18px;
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--color-surface);
   border: 1px solid rgba(7, 255, 251, 0.14);
   border-radius: 20px;
   padding: 24px;

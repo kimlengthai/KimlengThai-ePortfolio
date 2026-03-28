@@ -109,9 +109,10 @@ const experiences = [
     period: 'Oct 2025 - Nov 2025',
     image: sharingMindsLogo,
     points: [
-      'Contributed to software development tasks across frontend and application focused features.',
-      'Supported implementation work and collaborated on practical product development tasks.',
-      'Gained additional industry experience in writing maintainable and user focused code.',
+      'Supported development and administration across Microsoft Power Platform, including Power Apps, Dataverse configuration, solution deployment, and environment level settings.',
+      'Used PowerShell, pac CLI, and Linux command line tools for automation, data verification, and troubleshooting across multiple environments.',
+      'Contributed to internal JavaScript and workflow automation tasks, assisting with debugging, refactoring, and integration work across Dynamics 365 and Dataverse.',
+      'Collaborated with engineers and product stakeholders in an Agile workflow, applying software engineering fundamentals and SQL based data validation.',
     ],
   },
   {
@@ -120,9 +121,7 @@ const experiences = [
     period: 'Jul 2024 - Oct 2025',
     image: utsLogo,
     points: [
-      'Supported students in understanding mathematical concepts and problem solving techniques.',
-      'Communicated technical ideas clearly and guided learners through structured solutions.',
-      'Strengthened presentation, mentoring, and analytical thinking skills in an academic environment.',
+      'Taught university level mathematics, guiding students through complex topics to help them achieve academic success.',
     ],
   },
   {
@@ -131,9 +130,9 @@ const experiences = [
     period: 'Nov 2024 - Feb 2025',
     image: viCyberLogo,
     points: [
-      'Developed and improved frontend components using React to enhance platform usability.',
-      'Worked on dynamic PDF generation and automation across structured reporting workflows.',
-      'Designed responsive UI and UX components and collaborated on AWS based application features.',
+      'Developed and deployed an automated PDF reporting solution using Puppeteer, AWS Lambda, S3, and JavaScript to generate structured reports from dynamic data inputs.',
+      'Designed and implemented responsive dashboard interfaces using React.js, HTML, and CSS to visualise risk metrics and improve user experience.',
+      'Built serverless backend workflows to support report generation and secure document storage, leveraging cloud native architecture principles.',
     ],
   },
 ];

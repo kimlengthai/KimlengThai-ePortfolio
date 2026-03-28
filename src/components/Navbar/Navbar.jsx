@@ -45,12 +45,12 @@ export const Navbar = () => {
             {menuOpen ? (
               <CloseIcon
                 className={styles.menuBtn}
-                style={{ color: isDarkMode ? 'white' : 'black' }}
+                // style={{ color: isDarkMode ? 'white' : 'black' }}
               />
             ) : (
               <MenuIcon
                 className={styles.menuBtn}
-                style={{ color: isDarkMode ? 'white' : 'black' }}
+                // style={{ color: isDarkMode ? 'white' : 'black' }}
               />
             )}
           </button>

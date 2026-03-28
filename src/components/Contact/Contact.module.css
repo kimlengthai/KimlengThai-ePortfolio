@@ -16,7 +16,7 @@
   max-width: 980px;
   padding: 36px 32px;
   border-radius: 24px;
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--color-surface);
   border: 1px solid rgba(7, 255, 251, 0.14);
   box-shadow:
     0 0 18px rgba(7, 255, 251, 0.14),
