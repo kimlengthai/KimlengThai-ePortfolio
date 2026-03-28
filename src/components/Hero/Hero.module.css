@@ -8,10 +8,12 @@
   justify-content: space-between;
   margin: 0 10%;
   text-align: left;
-  padding-bottom: 0;
+  padding-top: 110px;
+  padding-bottom: 90px;
   overflow: visible;
   position: relative;
   gap: 48px;
+  box-sizing: border-box;
 }
 
 .content {
@@ -229,6 +231,8 @@
     text-align: center;
     align-items: center;
     justify-content: center;
+    padding-top: 110px;
+    padding-bottom: 110px;
   }
 
   .content {
@@ -281,6 +285,8 @@
     margin-left: 3%;
     margin-right: 3%;
     gap: 20px;
+    padding-top: 96px;
+    padding-bottom: 110px;
   }
 
   .title {
