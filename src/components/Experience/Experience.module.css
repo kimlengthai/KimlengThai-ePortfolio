@@ -5,13 +5,13 @@
   margin-top: 79px;
   margin-left: 10%;
   margin-right: 10%;
-  padding-bottom: 70px;
+  padding-bottom: 90px;
 }
 
 .title {
   color: var(--color-text);
   font-size: 35px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 1.75px;
   text-transform: uppercase;
   text-align: center;
@@ -22,19 +22,35 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  gap: 36px;
   margin-top: 14px;
+  align-items: flex-start;
 }
 
-.skillsSection {
-  width: 45%;
+.skillsSection,
+.historySection {
+  width: 50%;
+}
+
+.sectionHeading {
+  margin: 0 0 12px;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.sectionIntro {
+  margin: 0 0 28px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--color-text);
+  opacity: 0.9;
 }
 
 .skillsList {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 60px;
-  /* max-width: 500px; */
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px 18px;
   width: 100%;
 }
 
@@ -43,105 +59,133 @@
   flex-direction: column;
   align-items: center;
   gap: 11px;
-  width: calc(100% / 7);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .skill:hover {
-  transform: scale(1.1);
+  transform: translateY(-4px);
 }
 
 .skillImageContainer {
-  background-color: var(--neutral-color-1);
-  box-shadow: 0 0 12px rgb(7, 255, 251);
-  border-radius: 100%;
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 0 12px rgba(7, 255, 251, 0.25);
+  border: 1px solid rgba(7, 255, 251, 0.12);
+  border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 75px;
-  height: 75px;
+  width: 78px;
+  height: 78px;
 }
 
 .skillImage {
-  width: 50px;
-  height: 50px;
+  width: 46px;
+  height: 46px;
   object-fit: contain;
 }
 
 .skill p {
-  font-size: 18px;
+  font-size: 14px;
   font-family: 'Helvetica';
   font-weight: 500;
   text-align: center;
-}
-
-.historySection {
-  width: 45%;
+  margin: 0;
+  line-height: 1.4;
 }
 
 .historyList {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
 .historyItem {
-  margin-bottom: 40px;
-  box-shadow: 0 0 15px 0 rgb(7, 255, 251);
+  margin-bottom: 22px;
+  box-shadow: 0 0 15px 0 rgba(7, 255, 251, 0.16);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 20px;
 }
 
 .historyItem:hover {
-  transform: scale(1.03);
-  box-shadow: 0 0 20px 4px rgba(7, 255, 251, 0.5);
+  transform: translateY(-4px);
+  box-shadow: 0 0 24px 4px rgba(7, 255, 251, 0.22);
 }
 
 .historyLink {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: 17px;
-  background-color: var(--neutral-color-1);
-  border-radius: 10px;
+  gap: 18px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(7, 255, 251, 0.14);
+  border-radius: 20px;
   padding: 24px;
   text-decoration: none;
   color: inherit;
 }
 
 .historyImage {
-  width: 75px;
-  height: 75px;
+  width: 72px;
+  height: 72px;
   object-fit: contain;
+  border-radius: 16px;
+  background: #fff;
+  padding: 8px;
+  flex-shrink: 0;
 }
 
 .historyItemDetails {
   font-family: 'Helvetica';
+  width: 100%;
+}
+
+.historyHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
 }
 
 .historyItemDetails h4 {
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 600;
+  margin: 0;
 }
 
-.historyItemDetails p {
-  font-size: 16px;
-  font-weight: 300;
+.companyTag {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(7, 255, 251, 0.1);
+  border: 1px solid rgba(7, 255, 251, 0.18);
+  color: rgb(7, 255, 251);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.period {
+  font-size: 15px;
+  font-weight: 400;
+  margin: 0 0 12px;
+  opacity: 0.85;
 }
 
 .historyItemDetails ul {
-  margin-top: 6px;
-  list-style-position: inside;
-  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style-position: outside;
   list-style-type: disc;
-  margin-left: 17px;
+  margin-left: 18px;
+  padding-left: 0;
+  font-size: 14px;
+  line-height: 1.7;
 }
 
-.technicalSkill {
-  margin-bottom: 20px;
-}
-
-.workHistory {
-  margin-bottom: 30px;
-  margin-top: 20px;
+.historyItemDetails li {
+  margin-bottom: 6px;
 }
 
 /* Navigation bar */
@@ -155,7 +199,7 @@
   justify-content: center;
   gap: 20px;
   padding: 15px 0;
-  box-shadow: 0 -3px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.1);
   z-index: 999;
 }
 
@@ -174,6 +218,23 @@
   color: var(--neutral-color-1);
 }
 
+.skillGroup {
+  margin-bottom: 32px;
+}
+
+.skillGroupTitle {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: rgb(7, 255, 251);
+}
+
+@media (max-width: 1100px) {
+  .skillsList {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 830px) {
   .content {
     flex-direction: column;
@@ -185,18 +246,58 @@
     width: 100%;
   }
 
-  .historyLink {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  .skillsList {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .historyItemDetails ul {
-    text-align: left;
+  .historyLink {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .historyImage {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .skillsList {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .historyHeader {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
 @media screen and (max-width: 480px) {
+  .container {
+    margin-left: 6%;
+    margin-right: 6%;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .sectionHeading {
+    font-size: 24px;
+  }
+
+  .sectionIntro {
+    font-size: 14px;
+  }
+
+  .historyLink {
+    padding: 18px;
+  }
+
+  .historyItemDetails h4 {
+    font-size: 18px;
+  }
+
   .navigation {
     gap: 10px;
     padding: 12px 3%;
@@ -208,11 +309,5 @@
   .navigation a {
     padding: 6px 10px;
     font-size: 0.65rem;
-  }
-
-  .buttons {
-    font-size: 0.9rem;
-    padding: 10px 20px;
-    min-width: 120px;
   }
 }

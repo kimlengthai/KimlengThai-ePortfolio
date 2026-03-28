@@ -1,4 +1,5 @@
 import styles from './Experience.module.css';
+
 import htmlSkill from '../../../assets/skills/html.png';
 import cssSkill from '../../../assets/skills/css.png';
 import tailwindcssSkill from '../../../assets/skills/tailwindCSS.png';
@@ -23,293 +24,196 @@ import sqlSkill from '../../../assets/skills/sql.png';
 import firebaseSkill from '../../../assets/skills/firebase.png';
 import mongodbSkill from '../../../assets/skills/mongoDB.png';
 import jdbcSkill from '../../../assets/skills/JDBC.png';
-import LoginPageImage from '../../../assets/history/LoginPage.png';
-import zambarkImage from '../../../assets/history/zambark.png';
-import mmsImage from '../../../assets/history/mms.png';
-import IoTLoginPageImage from '../../../assets/projects/IoTLoginPage.png';
 import viCyberLogo from '../../../assets/history/vicyber_logo.jpeg';
+import sharingMindsLogo from '../../../assets/history/sharing_logo.webp';
+import utsLogo from '../../../assets/history/uts_logo.png';
+import amazons3Logo from '../../../assets/skills/amazons3_logo.png';
+import antdesignLogo from '../../../assets/skills/antdesign_logo.png';
+import awsapiGatewayLogo from '../../../assets/skills/awsapigateway_logo.jpg';
+import awsLambdaLogo from '../../../assets/skills/awslambda_logo.svg';
+import bootstrapLogo from '../../../assets/skills/bootstrap_logo.png';
+import dynamoDBLogo from '../../../assets/skills/dynamodb_logo.png';
+import flaskLogo from '../../../assets/skills/flask_logo.png';
+import pythonLogo from '../../../assets/skills/python_logo.webp';
+
+const skillGroups = [
+  {
+    title: 'Frontend',
+    skills: [
+      { image: reactSkill, name: 'React' },
+      { image: javascriptSkill, name: 'JavaScript' },
+      { image: htmlSkill, name: 'HTML' },
+      { image: cssSkill, name: 'CSS' },
+      { image: tailwindcssSkill, name: 'Tailwind CSS' },
+      { image: materialUISkill, name: 'Material UI' },
+      { image: antdesignLogo, name: 'Ant Design' },
+      { image: bootstrapLogo, name: 'Bootstrap' },
+      { image: nextJSSkill, name: 'Next.js' },
+      { image: vueJSSkill, name: 'Vue.js' },
+      { image: viteSkill, name: 'Vite' },
+    ],
+  },
+  {
+    title: 'Backend',
+    skills: [
+      { image: pythonLogo, name: 'Python' },
+      { image: flaskLogo, name: 'Flask' },
+      { image: expressJSSkill, name: 'Express.js' },
+      { image: javaSkill, name: 'Java' },
+      { image: jspSkill, name: 'JSP' },
+    ],
+  },
+  {
+    title: 'Cloud & DevOps',
+    skills: [
+      { image: awsSkill, name: 'AWS' },
+      { image: awsLambdaLogo, name: 'AWS Lambda' },
+      { image: awsapiGatewayLogo, name: 'API Gateway' },
+      { image: dynamoDBLogo, name: 'DynamoDB' },
+      { image: amazons3Logo, name: 'Amazon S3' },
+    ],
+  },
+  {
+    title: 'Other Technologies',
+    skills: [
+      { image: mongodbSkill, name: 'MongoDB' },
+      { image: firebaseSkill, name: 'Firebase' },
+      { image: sqlSkill, name: 'SQL' },
+      { image: jdbcSkill, name: 'JDBC' },
+      { image: cSharpSkill, name: 'C#' },
+      { image: cPlusPlusSkill, name: 'C++' },
+      { image: cSkill, name: 'C' },
+      { image: javaFXSkill, name: 'JavaFX' },
+      { image: reactNativeSkill, name: 'React Native' },
+      { image: expoSkill, name: 'Expo' },
+      { image: figmaSkill, name: 'Figma' },
+    ],
+  },
+];
+
+const experiences = [
+  {
+    title: 'Junior Software Engineer',
+    company: 'ViCyber',
+    period: 'Nov 2025 - Present',
+    image: viCyberLogo,
+    points: [
+      'Design and build modern frontend interfaces for cloud based applications using React.',
+      'Contribute to selected backend functionality and integrations across Python and AWS based workflows.',
+      'Collaborate on platform features that support risk assessment, reporting, and internal business processes.',
+    ],
+  },
+  {
+    title: 'Software Developer Intern',
+    company: 'Sharing Minds',
+    period: 'Oct 2025 - Nov 2025',
+    image: sharingMindsLogo,
+    points: [
+      'Contributed to software development tasks across frontend and application focused features.',
+      'Supported implementation work and collaborated on practical product development tasks.',
+      'Gained additional industry experience in writing maintainable and user focused code.',
+    ],
+  },
+  {
+    title: 'Mathematics Tutor',
+    company: 'University of Technology Sydney',
+    period: 'Jul 2024 - Oct 2025',
+    image: utsLogo,
+    points: [
+      'Supported students in understanding mathematical concepts and problem solving techniques.',
+      'Communicated technical ideas clearly and guided learners through structured solutions.',
+      'Strengthened presentation, mentoring, and analytical thinking skills in an academic environment.',
+    ],
+  },
+  {
+    title: 'Software Engineer Intern',
+    company: 'ViCyber',
+    period: 'Nov 2024 - Feb 2025',
+    image: viCyberLogo,
+    points: [
+      'Developed and improved frontend components using React to enhance platform usability.',
+      'Worked on dynamic PDF generation and automation across structured reporting workflows.',
+      'Designed responsive UI and UX components and collaborated on AWS based application features.',
+    ],
+  },
+];
 
 export const Experience = () => {
   return (
-    <section className={styles.container} id='experience'>
+    <section className={styles.container} id="experience">
       <h2 className={styles.title}>Experience</h2>
+
       <div className={styles.content}>
         <div className={styles.skillsSection}>
-          <h3 className={styles.technicalSkill}>Technical Skills</h3>
-          <div className={styles.skillsList}>
-            <div className={styles.skill}>
-              <div className={styles.skillImageContainer}>
-                <img src={htmlSkill} alt="HTML" className={styles.skillImage} />
+          <h3 className={styles.sectionHeading}>Technical Skills</h3>
+          <p className={styles.sectionIntro}>
+            Technologies I have worked with across frontend, backend, and cloud development.
+          </p>
+
+          {skillGroups.map((group) => (
+            <div key={group.title} className={styles.skillGroup}>
+              <h4 className={styles.skillGroupTitle}>{group.title}</h4>
+
+              <div className={styles.skillsList}>
+                {group.skills.map((skill) => (
+                  <div key={skill.name} className={styles.skill}>
+                    <div className={styles.skillImageContainer}>
+                      <img src={skill.image} alt={skill.name} className={styles.skillImage} />
+                    </div>
+                    <p>{skill.name}</p>
+                  </div>
+                ))}
               </div>
-              <p>HTML</p>
             </div>
-            <div className={styles.skill}>
-              <div className={styles.skillImageContainer}>
-                <img src={cssSkill} alt="CSS" className={styles.skillImage} />
-              </div>
-              <p>CSS</p>
-            </div>
-            <div className={styles.skill}>
-              <div className={styles.skillImageContainer}>
-                <img src={tailwindcssSkill} alt="Tailwind_CSS" className={styles.skillImage} />
-              </div>
-              <p>Tailwind CSS</p>
-            </div>
-            <div className={styles.skill}>
-              <div className={styles.skillImageContainer}>
-                <img src={javascriptSkill} alt="JavaScript" className={styles.skillImage} />
-              </div>
-              <p>JavaScript</p>
-            </div>
-            <div className={styles.skill}>
-              <div className={styles.skillImageContainer}>
-                <img src={reactSkill} alt="React" className={styles.skillImage} />
-              </div>
-              <p>React</p>
-            </div>
-            <div className={styles.skill}>
-              <div className={styles.skillImageContainer}>
-                <img src={vueJSSkill} alt="Vue_JS" className={styles.skillImage} />
-              </div>
-              <p>Vue.js</p>
-            </div>
-            <div className={styles.skill}>
-              <div className={styles.skillImageContainer}>
-                <img src={nextJSSkill} alt="Next_JS" className={styles.skillImage} />
-              </div>
-              <p>Next.js</p>
-            </div>
-            <div className={styles.skill}>
-              <div className={styles.skillImageContainer}>
-                <img src={expressJSSkill} alt="Express_JS" className={styles.skillImage} />
-              </div>
-              <p>Express.js</p>
-            </div>
-            <div className={styles.skill}>
-              <div className={styles.skillImageContainer}>
-                <img src={javaFXSkill} alt="JavaFX" className={styles.skillImage} />
-              </div>
-              <p>JavaFX</p>
-            </div>
-            <div className={styles.skill}>
-              <div className={styles.skillImageContainer}>
-                <img src={reactNativeSkill} alt="React Native" className={styles.skillImage} />
-              </div>
-              <p>React Native</p>
-            </div>
-            <div className={styles.skill}>
-              <div className={styles.skillImageContainer}>
-                <img src={materialUISkill} alt="Material UI" className={styles.skillImage} />
-              </div>
-              <p>Material UI</p>
-            </div>
-            <div className={styles.skill}>
-              <div className={styles.skillImageContainer}>
-                <img src={expoSkill} alt="Expo" className={styles.skillImage} />
-              </div>
-              <p>Expo</p>
-            </div>
-            <div className={styles.skill}>
-              <div className={styles.skillImageContainer}>
-                <img src={viteSkill} alt="Vite" className={styles.skillImage} />
-              </div>
-              <p>Vite</p>
-            </div>
-            <div className={styles.skill}>
-              <div className={styles.skillImageContainer}>
-                <img src={figmaSkill} alt="Figma" className={styles.skillImage} />
-              </div>
-              <p>Figma</p>
-            </div>
-            <div className={styles.skill}>
-              <div className={styles.skillImageContainer}>
-                <img src={awsSkill} alt="AWS" className={styles.skillImage} />
-              </div>
-              <p>AWS</p>
-            </div>
-            <div className={styles.skill}>
-              <div className={styles.skillImageContainer}>
-                <img src={cSharpSkill} alt="C#" className={styles.skillImage} />
-              </div>
-              <p>C#</p>
-            </div>
-            <div className={styles.skill}>
-              <div className={styles.skillImageContainer}>
-                <img src={cPlusPlusSkill} alt="C++" className={styles.skillImage} />
-              </div>
-              <p>C++</p>
-            </div>
-            <div className={styles.skill}>
-              <div className={styles.skillImageContainer}>
-                <img src={cSkill} alt="C" className={styles.skillImage} />
-              </div>
-              <p>C</p>
-            </div>
-            <div className={styles.skill}>
-              <div className={styles.skillImageContainer}>
-                <img src={javaSkill} alt="Java" className={styles.skillImage} />
-              </div>
-              <p>Java</p>
-            </div>
-            <div className={styles.skill}>
-              <div className={styles.skillImageContainer}>
-                <img src={jspSkill} alt="JSP" className={styles.skillImage} />
-              </div>
-              <p>JSP</p>
-            </div>
-            <div className={styles.skill}>
-              <div className={styles.skillImageContainer}>
-                <img src={sqlSkill} alt="SQL" className={styles.skillImage} />
-              </div>
-              <p>SQL</p>
-            </div>
-            <div className={styles.skill}>
-              <div className={styles.skillImageContainer}>
-                <img src={firebaseSkill} alt="Firebase" className={styles.skillImage} />
-              </div>
-              <p>Firebase</p>
-            </div>
-            <div className={styles.skill}>
-              <div className={styles.skillImageContainer}>
-                <img src={mongodbSkill} alt="MongoDB" className={styles.skillImage} />
-              </div>
-              <p>MongoDB</p>
-            </div>
-            <div className={styles.skill}>
-              <div className={styles.skillImageContainer}>
-                <img src={jdbcSkill} alt="JDBC" className={styles.skillImage} />
-              </div>
-              <p>JDBC</p>
-            </div>
-          </div>
+          ))}
         </div>
+
         <div className={styles.historySection}>
-          <h3 className={styles.workHistory}>Work History</h3>
+          <h3 className={styles.sectionHeading}>Professional Experience</h3>
+          <p className={styles.sectionIntro}>
+            My recent roles across software engineering, development, and academic support.
+          </p>
+
           <ul className={styles.historyList}>
-          {/* IoTBay Java Web App */}
-            <li className={styles.historyItem}>
-              <a
-                href="https://github.com/kimlengthai/IoTBay" // Replace with actual URL if different
-                target='_blank'
-                rel='noopener noreferrer'
-                className={styles.historyLink}
-              >
-                 <img
-                  src={IoTLoginPageImage}
-                  alt="IoTBay Logo"
-                  className={styles.historyImage}
-                /> 
-                <div className={styles.historyItemDetails}>
-                  <h4>Full-stack Developer, IoTBay Project</h4>
-                  <p>Mar, 2025 - May, 2025</p>
-                  <ul>
-                    <li>Developed a full-stack Java web app for an e-commerce platform focused on IoT products</li>
-                    <li>Implemented backend logic with Java Servlets and frontend with JSP</li>
-                    <li>Designed and connected to JavaDB (Apache Derby) database for product and user management</li>
-                    <li>Created responsive UI using Tailwind CSS, HTML, and JavaScript</li>
-                  </ul>
+            {experiences.map((item) => (
+              <li key={`${item.title}-${item.period}`} className={styles.historyItem}>
+                <div className={styles.historyLink}>
+                  <img
+                    src={item.image}
+                    alt={`${item.company} logo`}
+                    className={styles.historyImage}
+                  />
+
+                  <div className={styles.historyItemDetails}>
+                    <div className={styles.historyHeader}>
+                      <h4>{item.title}</h4>
+                      <span className={styles.companyTag}>{item.company}</span>
+                    </div>
+
+                    <p className={styles.period}>{item.period}</p>
+
+                    <ul>
+                      {item.points.map((point) => (
+                        <li key={point}>{point}</li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-              </a>
-            </li>
-            {/* Internship Experience */}
-            <li className={styles.historyItem}>
-              <div className={styles.historyLink}>
-                <img
-                  src={viCyberLogo}
-                  alt="ViCyber Logo"
-                  className={styles.historyImage}
-                />
-                <div className={styles.historyItemDetails}>
-                  <h4>Software Engineering Intern, ViCyber</h4>
-                  <p>Nov, 2024 - Feb, 2025</p>
-                  <ul>
-                    <li>Developed and optimised frontend components using React.js to enhance user experience</li>
-                    <li>Automated dynamic PDF report generation using Puppeteer, AWS Lambda, and structured JSON</li>
-                    <li>Designed 20+ responsive UI/UX components in Figma to support cross-device usability</li>
-                    <li>Collaborated on AWS-based infrastructure, improving performance across key workflows</li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li className={styles.historyItem}>
-              <a
-                href="https://github.com/kimlengthai/BabyUniversity"
-                target='_blank'
-                rel='noopener noreferrer'
-                className={styles.historyLink}
-              >
-                <img
-                  src={LoginPageImage}
-                  alt="LoginPage Logo"
-                  className={styles.historyImage}
-                />
-                <div className={styles.historyItemDetails}>
-                  <h4>Frontend Developer, Baby University</h4>
-                  <p>Mar, 2024 - May, 2024</p>
-                  <ul>
-                    <li>Worked on Animations pages on a book and main page</li>
-                    <li>Implemented parental control pages to access the payment system</li>
-                  </ul>
-                </div>
-              </a>
-            </li>
-            <li className={styles.historyItem}>
-              <a
-                href="https://github.com/kimlengthai/ZAMBARK-SUGGEST"
-                target='_blank'
-                rel='noopener noreferrer'
-                className={styles.historyLink}
-              >
-                <img
-                  src={zambarkImage}
-                  alt="zambark Logo"
-                  className={styles.historyImage}
-                />
-                <div className={styles.historyItemDetails}>
-                  <h4>Backend Developer, Zambark</h4>
-                  <p>Aug, 2023 - Nov, 2023</p>
-                  <ul>
-                    <li>Worked on recommending student courses</li>
-                    <li>Stored and retrieved subjects from MongoDB</li>
-                  </ul>
-                </div>
-              </a>
-            </li>
-            <li className={styles.historyItem}>
-              <a
-                href="https://github.com/kimlengthai/MembershipManagementSystem"
-                target='_blank'
-                rel='noopener noreferrer'
-                className={styles.historyLink}
-              >
-                <img
-                  src={mmsImage}
-                  alt="mms Logo"
-                  className={styles.historyImage}
-                />
-                <div className={styles.historyItemDetails}>
-                  <h4>UX/UI Designer & Frontend Developer, University of Technology Sydney</h4>
-                  <p>Sep, 2022 - Oct, 2022</p>
-                  <ul>
-                    <li>Developed a GUI, allowing users to add, remove, and update membership status</li>
-                    <li>Demonstrated proficiency in model-view-controller architecture</li>
-                  </ul>
-                </div>
-              </a>
-            </li>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
 
       <nav className={styles.navigation} aria-label="Secondary navigation">
-              <a href="#home">Home</a>
-              <a href="#about">About</a>
-              <a href="#experience">Experience</a>
-              <a href="#project">Projects</a>
-              <a href="#contact">Contact</a>
-        </nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#project">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </section>
   );
-}
+};
 
 export default Experience;
