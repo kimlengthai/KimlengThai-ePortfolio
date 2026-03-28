@@ -4,20 +4,55 @@ import profilePicture from '/assets/profile/profilePicture.jpeg';
 export const Hero = () => {
   return (
     <>
-      <header className={styles.container} aria-label="Introduction">
+      <header className={styles.container} id="home" aria-label="Introduction">
         <div className={styles.content}>
-          <h1 className={styles.title}>Hey there, I&apos;m Kimleng Thai!</h1>
-          <p className={styles.description}> 
-            A final-year student studying Software Engineering at UTS.
-            I enjoy solving problems and learning new technologies, which is why I chose this field.
-          </p>
+          <p className={styles.eyebrow}>Junior Software Engineer</p>
+
+          <h1 className={styles.title}>Kimleng Thai</h1>
+
           <p className={styles.description}>
-            Outside of coding and uni, I enjoy playing Football, watching NBA, and listening to podcasts.
+            Software Engineering graduate from the University of Technology Sydney,
+            currently working at ViCyber and focused on building clean, modern, and
+            user centred web experiences.
           </p>
-          <a href="mailto:kimleng.ngs@gmail.com" className={styles.contactBtn}>
-            Contact Me
-          </a>
+
+          <p className={styles.description}>
+            My work centres on frontend development with React, while also contributing
+            to selected backend and cloud based features using Python and AWS.
+          </p>
+
+          <div className={styles.statsRow}>
+            <div className={styles.statCard}>
+              <span className={styles.statValue}>1+ Year</span>
+              <span className={styles.statLabel}>Software Experience</span>
+            </div>
+
+            <div className={styles.statCard}>
+              <span className={styles.statValue}>React</span>
+              <span className={styles.statLabel}>Frontend Focus</span>
+            </div>
+
+            <div className={styles.statCard}>
+              <span className={styles.statValue}>AWS</span>
+              <span className={styles.statLabel}>Cloud Exposure</span>
+            </div>
+          </div>
+
+          <div className={styles.actions}>
+            <a href="mailto:kimleng.ngs@gmail.com" className={styles.contactBtn}>
+              Contact Me
+            </a>
+
+            <a
+              href="#project"
+              className={styles.secondaryBtn}
+              aria-label="View Kimleng Thai projects"
+            >
+              View Projects
+            </a>
+          </div>
         </div>
+
         <img
           src={profilePicture}
           alt="Kimleng Thai"
@@ -25,6 +60,7 @@ export const Hero = () => {
           loading="lazy"
           decoding="async"
         />
+
         <div className={styles.topBlur} aria-hidden="true"></div>
         <div className={styles.bottomBlur} aria-hidden="true"></div>
       </header>
